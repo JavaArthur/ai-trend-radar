@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import raw from '../../data/catalog.json';
+import type {Catalog} from '../lib/types';
+import {categories,forms,categoryName,formName} from '../lib/taxonomy';
+import {metrics} from '../lib/metrics';
+import {number,compact,datetime,sparkline} from '../lib/display';
+const catalog=raw as Catalog;
+const projects=catalog.projects.filter(p=>p.classification.aiRelated);
+const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+const weekly=new Map(catalog.trending.weekly.entries.map(p=>[p.fullName.toLowerCase(),p]));
+const inWeek=projects.filter(p=>weekly.has(p.fullName.toLowerCase()));
+const sorted=[...projects].sort((a,b)=>(weekly.get(a.fullName.toLowerCase())?.rank??999)-(weekly.get(b.fullName.toLowerCase())?.rank??999)||b.stars-a.stars);
+const categoryCounts=Object.fromEntries(categories.map(c=>[c.id,projects.filter(p=>p.classification.categories.includes(c.id)).length]));
+const observed=projects.filter(p=>metrics(p).delta!==null).length;
+---
+<Layout>
+<main id="main">
+<section class="hero wrap">
+ <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> FOLLOW THE SIGNAL, FIND YOUR NEXT IDEA</div><h1>发现 AI 开源世界<br/>正在升起的<span class="accent">下一颗星</span><span class="hero-asterisk">✳</span></h1><p>从热门到好用。让值得关注的项目，出现在你的视野里。</p><div class="hero-actions"><a class="button dark" href="#explore">探索项目 <span>↗</span></a><span class="auto-note"><span class="live-dot"></span> 每日更新 · 有据可查</span></div></div>
+ <div class="signal-panel" aria-label="目录概览"><div class="panel-title"><span>RADAR / LIVE INDEX</span><span class="cross">+</span></div><div class="radar-art" aria-hidden="true"><div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div><div class="radar-axis x"></div><div class="radar-axis y"></div><div class="radar-sweep"></div><i class="blip b1"></i><i class="blip b2"></i><i class="blip b3"></i><span class="radar-center">✦</span><span class="radar-coordinate">AI / OPEN SOURCE</span></div><div class="panel-stats"><div><strong>{number(projects.length)}</strong><span>已收录项目</span></div><div><strong>{inWeek.length}<em>↗</em></strong><span>官方周榜 AI 项目</span></div><div><strong>{categories.length}</strong><span>探索方向</span></div></div></div>
+</section>
+<div class="update-strip wrap"><span><span class="status-dot"></span> 最近采集 <time datetime={catalog.lastSuccessfulCollectionAt||''}>{datetime(catalog.lastSuccessfulCollectionAt)}</time> <small>北京时间</small></span><span>观察真实增长，不预测未来热度 <a href={`${base}/about/`}>了解口径 ↗</a></span></div>
+<div class="stale-message wrap" id="stale-warning" hidden>数据已超过 48 小时未更新，当前显示上次成功采集的结果。</div>
+<section class="workspace wrap" id="explore">
+ <aside class="sidebar"><div class="side-heading">探索方向 <small>{categories.length}</small></div><div class="category-list" role="group" aria-label="用途分类"><button class="category active" data-category="all" aria-pressed="true"><span class="cat-icon">⊞</span><span>全部项目</span><small>{projects.length}</small></button>{categories.map(c=><button class="category" data-category={c.id} aria-pressed="false"><span class="cat-icon">{c.icon}</span><span>{c.name}</span><small>{categoryCounts[c.id]}</small></button>)}</div><div class="side-divider"></div><button class="bookmark-filter" id="favorites" aria-pressed="false"><span>☆</span> 我的收藏 <small id="favorite-count">0</small></button><div class="side-note"><span>一个小提示</span><p>总 Star 是积累，<br/>近期增长才是信号。</p><a href={`${base}/about/`}>我们如何看趋势 ↗</a></div><a class="contribute" href="https://github.com/JavaArthur/ai-trend-radar/issues/new" target="_blank" rel="noopener noreferrer">推荐一个项目 <span>＋</span></a></aside>
+ <div class="results-area"><div class="results-heading"><div><div class="eyebrow muted">THE DISCOVERY BOARD</div><h2 id="section-title">值得留意的 AI 项目<span>↗</span></h2></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="搜索项目、用途、标签…" aria-label="搜索项目、用途、标签"/><kbd>/</kbd></label></div>
+ <div class="tabs" role="group" aria-label="榜单"><button class="tab active" data-view="weekly" aria-pressed="true">官方周榜 <span>AI 精选</span></button><button class="tab" data-view="growth" aria-pressed="false">近 7 天净增</button><button class="tab" data-view="rising" aria-pressed="false">持续上升</button><button class="tab" data-view="new" aria-pressed="false">最近发现</button><button class="tab" data-view="all" aria-pressed="false">全部收录</button></div>
+ <div class="filter-row"><div class="form-filters" role="group" aria-label="项目形态"><span>形态</span><button class="form-chip active" data-form="all" aria-pressed="true">全部</button>{forms.map(f=><button class="form-chip" data-form={f.id} aria-pressed="false">{f.name}</button>)}</div><span id="result-count" class="result-count" aria-live="polite"></span></div>
+ <div class="board-note" id="board-note"><span>ⓘ</span><p id="note-text">来自 GitHub 官方周榜的 AI 项目，保留官方排名；周榜增长与本站净增口径不同。</p></div>
+ <div class="cards" id="cards">{sorted.map(p=>{
+  const m=metrics(p);const w=weekly.get(p.fullName.toLowerCase());const c=p.classification;const pts=sparkline(p.snapshots.slice(-8));
+  return <article class="project-card" data-id={p.id} data-name={p.fullName} data-categories={c.categories.join(',')} data-forms={c.forms.join(',')} data-search={[p.fullName,c.summary,p.description,...c.tags,...c.categories.map(categoryName),...c.forms.map(formName)].join(' ').toLowerCase()} data-weekly={w?.rank??0} data-weekly-stars={w?.starsInPeriod??''} data-hot={String(m.hot)} data-rising={String(m.rising)} data-delta={m.delta??''} data-new={p.firstSeenAt} data-stars={p.stars} hidden={!w}>
+   <div class="card-top"><span class="owner-avatar" aria-hidden="true">{p.fullName.split('/')[0].slice(0,2).toUpperCase()}</span><div class="repo-identity"><span>{p.fullName.split('/')[0]}</span><a href={`${base}/projects/${p.slug}/`}>{p.fullName.split('/')[1]} <span>↗</span></a></div><button class="save-button" data-save={p.id} aria-label={`收藏 ${p.fullName}`} aria-pressed="false">☆</button></div>
+   <div class="card-tags">{c.categories.slice(0,2).map(id=><span>{categoryName(id)}</span>)}{c.forms.slice(0,1).map(id=><span class="shape-tag">{formName(id)}</span>)}</div>
+   <p class="card-description">{c.summary||p.description||'项目尚未提供简介。'}</p>
+   <div class="card-subline">{c.status==='rules'?<span class="pending">中文摘要待补充</span>:<span>{c.status==='manual'?'编辑校订':'AI 整理'} · 基于仓库资料</span>}{!m.active&&<span class="inactive">{p.archived?'已归档':p.unavailable?'暂不可用':'近期未维护'}</span>}</div>
+   <div class="card-bottom"><span class="star-count">☆ <strong>{compact(p.stars)}</strong></span><span class="growth-value" data-growth>{w?.starsInPeriod!=null?`↗ ${number(w.starsInPeriod)} / 官方本周`:m.delta!==null?`${m.delta>=0?'+':''}${number(m.delta)} / 7天`:'◌ 趋势观察中'}</span></div>
+   {pts&&<svg class="mini-chart" viewBox="0 0 240 60" role="img" aria-label="最近观测的 Star 走势"><polyline points={pts}/></svg>}
+  </article>
+ })}</div>
+ <div class="empty-state" id="empty" hidden><span>◎</span><h3 id="empty-title">暂时没有匹配的项目</h3><p id="empty-description">试试其他关键词或分类。</p><button class="button light" id="reset">重置筛选 ↗</button></div>
+ <div class="results-foot"><span>保持好奇，下一颗星可能就在这里。</span><a href="#main">回到顶部 ↑</a></div>
+ </div>
+</section>
+</main>
+<script define:vars={{lastUpdated:catalog.lastSuccessfulCollectionAt,weeklyAt:catalog.trending.weekly.fetchedAt,weeklyError:catalog.trending.weekly.error,observed}}>
+ window.__radar={lastUpdated,weeklyAt,weeklyError,observed};
+</script>
+<script>
+ import '../lib/client';
+</script>
+</Layout>

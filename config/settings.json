@@ -1,0 +1,31 @@
+{
+  "initialLimit": 200,
+  "trackingLimit": 500,
+  "historyDays": 90,
+  "activeWithinDays": 90,
+  "hotAbsolute": 100,
+  "hotMinimum": 30,
+  "hotRate": 0.1,
+  "positiveDays": 5,
+  "aiDailyLimit": 30,
+  "githubRequestBudget": 850,
+  "providers": [
+    {
+      "id": "openrouter",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "model": "openrouter/free",
+      "keyEnv": "OPENROUTER_API_KEY",
+      "dailyLimit": 30,
+      "freeOnly": true
+    },
+    {
+      "id": "groq",
+      "baseUrl": "https://api.groq.com/openai/v1",
+      "model": "llama-3.3-70b-versatile",
+      "keyEnv": "GROQ_API_KEY",
+      "dailyLimit": 30,
+      "freeOnly": true,
+      "confirmationEnv": "GROQ_FREE_TIER_CONFIRMED"
+    }
+  ]
+}
