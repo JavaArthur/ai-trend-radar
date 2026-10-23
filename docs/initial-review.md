@@ -2,7 +2,7 @@
 
 核验日期：2026-10-23。以下条目的中文简介由本次搭建过程人工整理，依据实际采集的 GitHub 简介、Topics 和技能证据；不使用免费模型调用，不编造增长历史。`android/skills` 另行读取 README 核实官方定位及安装方式。
 
-共校订 44 个项目；规则分类只是初筛，人工覆盖以仓库 ID 保存，后续不会被自动输出覆盖。
+共校订 45 个项目；规则分类只是初筛，人工覆盖以仓库 ID 保存，后续不会被自动输出覆盖。
 
 | 仓库                                                                                                  | 用途                      | 形态             | 结果               |
 | ----------------------------------------------------------------------------------------------------- | ------------------------- | ---------------- | ------------------ |
@@ -52,3 +52,7 @@
 | [cclank/lanshu-create-ai-presenter-video](https://github.com/cclank/lanshu-create-ai-presenter-video) | video, image              | skill            | 中文摘要与用途校订 |
 
 另外排除将紫微斗数引擎、Airflow 和通用网页提取工具仅凭间接 AI 关键词判断为 AI 项目的情况；Ghidra、PHP 和 Node.js 在规则筛选中未被判定为 AI。
+
+另补充 [doocs/md](https://github.com/doocs/md)：公众号排版与办公用途，应用形态，校订中文介绍和公众号排版标签。
+
+实际 Skill 核验移除了仅有泛泛引用、没有可核实技能文件或安装说明的三个标签：Leey21/awesome-ai-research-writing、szczyglis-dev/py-gpt、timoncool/YuE2-Studio。核验脚本为 `scripts/verify-skills.ts`。

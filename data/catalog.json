@@ -277,12 +277,12 @@
             "text": "claude-code, mcp, skills"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：external_plugins/discord/skills/access/SKILL.md、external_plugins/discord/skills/configure/SKILL.md、external_plugins/imessage/skills/access/SKILL.md"
           }
         ],
         "readmeHash": "f34b8730d2b61617045c61ea2d9bf3ab08561305bfac77ea061e755bf46aeac2",
@@ -430,12 +430,12 @@
             "text": "skills"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：build-system/agp/agp-9-upgrade/SKILL.md、camera/camerax/SKILL.md、cars/android-for-cars-parked-apps/SKILL.md"
           }
         ],
         "readmeHash": "ddb3ed68437a77d0650011d66435196f291c492989aeb0e673b1f9bf920fffb6",
@@ -637,12 +637,12 @@
             "text": "Cursor plugin specification and official plugins"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：advisor/skills/advisor/SKILL.md、agent-compatibility/skills/check-agent-compatibility/SKILL.md、cli-for-agent/skills/cli-for-agents/SKILL.md"
           }
         ],
         "readmeHash": "2c713c37c88341d562dfaf6b7d5befd97fbb1fa64ba89ac390ff15cfd1b15ba7",
@@ -756,12 +756,12 @@
             "text": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：3MF/agent-harness/cli_anything/threemf/skills/SKILL.md、QGIS/agent-harness/cli_anything/qgis/skills/SKILL.md、adguardhome/agent-harness/cli_anything/adguardhome/skills/SKILL.md"
           }
         ],
         "readmeHash": "24669c9549ad753b173eead4ffc465ebc0b8dc9b4d64e7be73cd5b3b03f56ac9",
@@ -924,12 +924,12 @@
             "text": "ai, audiobook, cuda, dubbing, elevenlabs-alternative, huggingface, local-first, mlx, omnivoice-studio, speech-to-text, text-to-speech, transcription"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：.agents/skills/fastapi-python/SKILL.md、.agents/skills/vite/SKILL.md、skills/voicestudio-maintainer/SKILL.md"
           }
         ],
         "readmeHash": "3d25f376ad17835e0a36885b4d28d1d6966999e06e90f36c54ea40748f20fd15",
@@ -1012,12 +1012,12 @@
             "text": "ai, ai-agents, animation, claude-code, ffmpeg, framework, gsap, html, html-to-video, mcp, motion-graphics, puppeteer"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：.agents/skills/captions-overlay/SKILL.md、.agents/skills/changelog-video/SKILL.md、.agents/skills/cut-the-curve/SKILL.md"
           }
         ],
         "readmeHash": "f90b77b82976fe69d697c12f32b1a31ca6651d0342708248f933bf4280034b89",
@@ -1103,12 +1103,12 @@
             "text": "agent-skills, ai-scientist, bioinformatics, chemoinformatics, claude, claude-skills, claudecode, clinical-research, computational-biology, data-analysis, drug-discovery, genomics"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：skills/13c-metabolic-flux/SKILL.md、skills/adaptyv/SKILL.md、skills/aeon/SKILL.md"
           }
         ],
         "readmeHash": "2d4a9f2268c6ed70fc0d0d769921963da6b82966bd71c4b0225e35b0779b2447",
@@ -1305,12 +1305,12 @@
             "text": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：skills/security-audit/SKILL.md"
           }
         ],
         "readmeHash": "55e793bbea3563f8246735997c07aaee360e043eeb626f0b56ea6161c8618ae7",
@@ -1475,12 +1475,12 @@
             "text": "OpenShell is the safe, private runtime for autonomous AI agents."
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：.agents/skills/apply-triage-action/SKILL.md、.agents/skills/build-from-issue/SKILL.md、.agents/skills/build-openshell-mxc-windows/SKILL.md"
           }
         ],
         "readmeHash": "b28bf8191159a5ceb4800f30f44ba5979e7900e87975f8fbcf81e10f40c88883",
@@ -1629,12 +1629,12 @@
             "text": "claude-ai, claude-pt, claude-skills, redteam, redteam-tools, skills"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：Skills/active-directory/offensive-active-directory/SKILL.md、Skills/active-directory/offensive-netexec/SKILL.md、Skills/ai/offensive-ai-security/SKILL.md"
           }
         ],
         "readmeHash": "82bb9daa054e003caa6a4c33a2f19209cb5c711bcc65e34707b54828ef3698c3",
@@ -2054,12 +2054,12 @@
             "text": "ai, ai-agents, chatbot, crm, customer-support, ecommerce, lgpd, mcp, multi-tenant, nextjs, nuvemshop, open-source"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：.agents/skills/deskcomm-cliente-novo/SKILL.md、.agents/skills/deskcomm-contribuir/SKILL.md、.agents/skills/deskcomm-doutrina/SKILL.md"
           }
         ],
         "readmeHash": "4f2e6ee779fae03ff2bae184878018dec7f7758b12941f259af8a91b0e643fe4",
@@ -2309,7 +2309,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：content/skills/accessibility-i18n/SKILL.md、content/skills/ai-agent-system-architecture/SKILL.md、content/skills/ai-evaluation-engineering/SKILL.md"
           }
         ],
         "readmeHash": "05574990b930fe6ece135fad84aced02598e2040b6d17988346d923162592312",
@@ -3693,7 +3693,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：.claude/skills/publish-plugins/SKILL.md、.claude/skills/upgrade-playbooks/SKILL.md、skills/audit-agent-settings/SKILL.md"
           }
         ],
         "readmeHash": "eb4f2831736d46eef15cf11ce2f3675b2a31b7a0cbea742dc328b37824e25d8c",
@@ -4880,7 +4880,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：skills/brainstorming/SKILL.md、skills/diagnosing-superpowers/SKILL.md、skills/dispatching-parallel-agents/SKILL.md"
           }
         ],
         "readmeHash": "79f29f50c735862d2e304ea547b4c9aa67d9db6909ff6fb7b5ea922d7bcbc3e7",
@@ -4960,7 +4960,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：.agents/skills/agent-introspection-debugging/SKILL.md、.agents/skills/agent-sort/SKILL.md、.agents/skills/api-design/SKILL.md"
           }
         ],
         "readmeHash": "891c1db3e717d893e625c9a87194a2dda07185911019a6e0e8b4c4bfd5d3b92c",
@@ -5337,7 +5337,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：skills/firecrawl-build-interact/SKILL.md、skills/firecrawl-build-onboarding/SKILL.md、skills/firecrawl-build-scrape/SKILL.md"
           }
         ],
         "readmeHash": "13ac2f319b675696004dc004f4e32084d08f138151424499f7239d2b9f0d8a67",
@@ -5574,7 +5574,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：.openclaw/skills/ponytail-audit/SKILL.md、.openclaw/skills/ponytail-debt/SKILL.md、.openclaw/skills/ponytail-gain/SKILL.md"
           }
         ],
         "readmeHash": "3428352df7025c06241af37b51540a84418449abbcaf9bbf55a69ecd4f152619",
@@ -6368,7 +6368,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：agent_skills/advisor-orchestrator-worker/SKILL.md、agent_skills/commit-archaeologist/SKILL.md、agent_skills/dependency-doctor/SKILL.md"
           }
         ],
         "readmeHash": "91e321c262b6c6be2de89bb66d4d6f5874ea0010f4793a5bf9701982924ee6af",
@@ -6451,7 +6451,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：docs/skill/SKILL.md"
           }
         ],
         "readmeHash": "80f3338c092ebee3b2bc7a4b8b2d9e306e20ea47d90d6cd4126c68ad16fc4aac",
@@ -6542,7 +6542,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：graphify/skill.md"
           }
         ],
         "readmeHash": "b65a7f15565fbeac0b7be53d205e6c546ea81d5f19ecfe7d1922f8b38194c848",
@@ -7552,7 +7552,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：Co-creation-projects/jphJack-PaperMindAgent/staged-skills/paper-innovation-designer/SKILL.md、Co-creation-projects/lcyting-StockSage-agent/skills/巴菲特投资思维/skills/buffett/SKILL.md、Co-creation-projects/lcyting-StockSage-agent/skills/智能选股/mx-xuangu/SKILL.md"
           }
         ],
         "readmeHash": "086d22ae09204565b271e9fb5f68b3ca9ce72de9bda46f0a50539e1248a32223",
@@ -7640,7 +7640,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：artifacts-builder/SKILL.md、brand-guidelines/SKILL.md、canvas-design/SKILL.md"
           }
         ],
         "readmeHash": "e693f2701840f26fb04c3058d55215f2c6575fff7f1c197ada5b64e2f7ee0c12",
@@ -7901,7 +7901,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：.agents/skills/3d-asset-generation/SKILL.md、.agents/skills/acestep/SKILL.md、.agents/skills/agents/SKILL.md"
           }
         ],
         "readmeHash": "d10e96ce97d87a2519cda2c51261f8dac3daf0b7272cde574c2861ab8d40ab38",
@@ -7990,7 +7990,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：Anthropic/artifact-types/dashboard/SKILL.md、Anthropic/artifact-types/design-system/SKILL.md、Anthropic/artifact-types/design/SKILL.md"
           }
         ],
         "readmeHash": "b9655e001bee7ae386d5982edbe6813e64726af4d60997fe3d9fe1a7b459a3da",
@@ -8149,7 +8149,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：skills/ppt-master/SKILL.md"
           }
         ],
         "readmeHash": "c98d33b920c6cd7d0c13eee7c94d9cd883458c605f48291cc2acfa54be975187",
@@ -8383,7 +8383,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：SKILL.md"
           }
         ],
         "readmeHash": "500b53c0d29cd3219d160b5f9a109c0969f706aec74b49a4a081d2026ba48ec7",
@@ -9082,7 +9082,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：skill-data/agentcore/SKILL.md、skill-data/core/SKILL.md、skill-data/derive-client/SKILL.md"
           }
         ],
         "readmeHash": "a6dc7950dcbe2a68f8337391929dd0ffd9e56898470a0c5d42e107f6fc09e74e",
@@ -9140,7 +9140,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：CTF-Sandbox-Orchestrator/competition-ad-certificate-abuse/SKILL.md、CTF-Sandbox-Orchestrator/competition-agent-cloud/SKILL.md、CTF-Sandbox-Orchestrator/competition-android-hooking/SKILL.md"
           }
         ],
         "readmeHash": "901928f1cf058e43c8bc38586a21681bc301589e24e744f114d49859b2934910",
@@ -9679,7 +9679,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：.agents/skills/clone-website/SKILL.md"
           }
         ],
         "readmeHash": "94705f8f549edda43dca03519ee74142e632f945c0b659647a975a48548da80c",
@@ -9961,7 +9961,7 @@
       "sources": [
         "search:content"
       ],
-      "skillEvidence": true,
+      "skillEvidence": false,
       "classification": {
         "aiRelated": true,
         "categories": [
@@ -9970,7 +9970,6 @@
           "office"
         ],
         "forms": [
-          "skill",
           "resource"
         ],
         "tags": [],
@@ -9980,10 +9979,6 @@
           {
             "source": "description",
             "text": "Elevate your AI research writing, no more tedious polishing ✨ "
-          },
-          {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
           }
         ],
         "readmeHash": "683ccab5559a3cb029736ca3dd70e3ff674aadcae0e2af3dbad9ef307093a7ef",
@@ -10615,7 +10610,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：.qwen/skills/agent-reproduce-align/SKILL.md、.qwen/skills/agent-reproduce-feature/SKILL.md、.qwen/skills/autofix/SKILL.md"
           }
         ],
         "readmeHash": "4a0ebab59ff1b820bcc4456fa8c44e1c8593d7fef26a6183c7c18aa36c6b1966",
@@ -11028,7 +11023,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：docs/guide/skill.md、docs/zh/guide/skill.md、skills/hypit/SKILL.md"
           }
         ],
         "readmeHash": "4a58c61016561cef90afdb46bcc85a24dae0cd78bf2544d969369952ff956cef",
@@ -12183,7 +12178,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：skills/agent/coding/SKILL.md、skills/agent/document-authoring/SKILL.md、skills/agent/live-tutorial/SKILL.md"
           }
         ],
         "readmeHash": "622b6737c5c4228aee1f52a93102001d290a25e85610c35b964e1a6aa546b1d0",
@@ -12699,22 +12694,18 @@
         "aiRelated": true,
         "categories": [
           "content",
-          "models",
-          "coding"
+          "office"
         ],
         "forms": [
           "app"
         ],
         "tags": [
-          "ai-bot",
-          "doocs",
-          "editor",
-          "llm",
-          "markdown",
-          "markdown-editor"
+          "公众号排版",
+          "Markdown",
+          "AI 助手"
         ],
-        "summary": "✍ WeChat Markdown Editor | 一款高度简洁的微信 Markdown 编辑器：支持 Markdown 语法、自定义主题样式、内容管理、多图床、AI 助手等特性",
-        "status": "rules",
+        "summary": "带有 AI 助手的微信 Markdown 编辑器，支持公众号排版、自定义主题、内容管理与多图床，适合整理和发布公众号文章。",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -12723,6 +12714,10 @@
           {
             "source": "topics",
             "text": "ai-bot, doocs, editor, llm, markdown, markdown-editor, tailwindcss, vite, vue, vue3, wechat, weixin"
+          },
+          {
+            "source": "manual",
+            "text": "依据 GitHub 仓库简介校订，明确具备 AI 助手及微信 Markdown 编辑能力。"
           }
         ],
         "readmeHash": "cc3a3ba70c537e333bf4215fada9595b69eb025aa6d97c6e8176e13900836e1c",
@@ -12797,7 +12792,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：skills/beautiful-article/SKILL.md、skills/gpt-image-2/SKILL.md、skills/kb-retriever/SKILL.md"
           }
         ],
         "readmeHash": "06d4629411d6e1aed32ba58a5d85097bd1800aeeeb409a2bc360d51c0c9510f5",
@@ -12880,7 +12875,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：SKILL.md"
           }
         ],
         "readmeHash": "fa2bdc818346354b617fd3749d89e1ec36da8c9c8e807c94167b4b70b93d5c31",
@@ -13010,7 +13005,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：skills/no-ai-slop/SKILL.md"
           }
         ],
         "readmeHash": "a2e24837d6531c2e827876123d05ea482a21bcfc25358dbdacbf581fb1e51d81",
@@ -13153,7 +13148,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：skills/yue2-music/SKILL.md、skills/yue2-music/instrumental/SKILL.md"
           }
         ],
         "readmeHash": "ca41207b5edc1bbd9902ae21ade99986d7a81deff706a47bff252f7c3f987810",
@@ -14008,7 +14003,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：next/src/lib/templates/skills/article-magazine/SKILL.md、next/src/lib/templates/skills/article-sketchnote-editorial/SKILL.md、next/src/lib/templates/skills/blog-post/SKILL.md"
           }
         ],
         "readmeHash": "771ca7b051cb160ee350f71ad0cb4424e88733032c4f82b20cf545d34b645f46",
@@ -14313,12 +14308,12 @@
             "text": "agent-skills, ai-agent, ai-novel-writing, ai-writing, antigravity, chinese-novel, claude-code, claude-code-skills, claude-skills, codex, creative-writing, fiction-writing"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：skills/browser-cdp/SKILL.md、skills/story-cover/SKILL.md、skills/story-deslop/SKILL.md"
           }
         ],
         "readmeHash": "d1d4411106fe9f66f114e7feb28af142e735d109b489b64ade05578bad4d43b9",
@@ -14703,7 +14698,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：codex/skills/humanize-korean/SKILL.md、copilot/skills/humanize-korean/SKILL.md、extras/skills/commit-ko/SKILL.md"
           }
         ],
         "readmeHash": "a48742e522f79f5e200084a7bf9cd0d8878897bc023c7fe45f09d77aa249e4ac",
@@ -14952,12 +14947,12 @@
             "text": "agent-skills, ai-image-prompts, claude-code-skill, cli, codex-skill, gpt-image, gpt-image-2, gpt-image-2-prompts, image-editing, image-generation, image-prompt, openai"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：skills/get-prompt-from-image/SKILL.md、skills/gpt-image/SKILL.md"
           }
         ],
         "readmeHash": "1006e387dcb4f7f0c8398ba820920dc7394e85e4e562d4ae67da5a00c600842a",
@@ -15123,7 +15118,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：SKILL.md、plugins/avoid-ai-writing/skills/avoid-ai-writing/SKILL.md、skills/ai-writing-detector/SKILL.md"
           }
         ],
         "readmeHash": "225a3dad131c13d83592f6263b98dcb17fedb651f0b50e04b092b18dd8525be2",
@@ -15753,12 +15748,12 @@
             "text": "agent-skills, ai-short-drama, ai-video, aigc, claude-code, claude-code-skills, claude-skills, codex, comic-drama, micro-drama, prompt-engineering, screenwriting"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：maintainers/skills/short-drama-knowhow/SKILL.md、skills/short-drama-assets/SKILL.md、skills/short-drama-develop/SKILL.md"
           }
         ],
         "readmeHash": "d4f7e63539c03b934701337e4517f61f8b15cb6b4fc3a694e4d166247010e074",
@@ -16127,12 +16122,12 @@
             "text": "ai-video, codex, codex-skill, digital-human, video-generation"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：SKILL.md"
           }
         ],
         "readmeHash": "0a23ffb0895e35751118dad3ae607447cd0c535d0d328d8f772eee36c8ad0005",
@@ -16440,7 +16435,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：skill/SKILL.md、skill/h3-video/SKILL.md"
           }
         ],
         "readmeHash": "4ae47731223d65481685c00f79d811f4a9d4e519c05bc81c6481956b762900b8",
@@ -16570,7 +16565,7 @@
       "sources": [
         "search:video"
       ],
-      "skillEvidence": true,
+      "skillEvidence": false,
       "classification": {
         "aiRelated": true,
         "categories": [
@@ -16579,7 +16574,6 @@
           "audio"
         ],
         "forms": [
-          "skill",
           "mcp"
         ],
         "tags": [
@@ -16600,10 +16594,6 @@
           {
             "source": "topics",
             "text": "agents, ai, ai-assistant, artificial-intelligence, autonomous-agent, chatbot, claude, deepseek, desktop-app, gemini, gpt-5, gpt-6-astra"
-          },
-          {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
           }
         ],
         "readmeHash": "0b96ed088bad036930e71b58c1ae8a1c40c9bffd6fee36cfdd8b786887e7014d",
@@ -16762,12 +16752,12 @@
             "text": "agent-skill, ai-video, bilibili, claude-code, idea-to-video, remotion, text-to-speech, video-generation"
           },
           {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
-          },
-          {
             "source": "manual",
             "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+          },
+          {
+            "source": "readme",
+            "text": "已核实实际技能文件：skills/video-podcast-maker-lite/SKILL.md、skills/video-podcast-maker-nano/SKILL.md、skills/video-podcast-maker/SKILL.md"
           }
         ],
         "readmeHash": "e44d067281c76831b096a60af60c9b293557fd4887e10dc7e1bedac4c00d5fe2",
@@ -16824,7 +16814,7 @@
           },
           {
             "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
+            "text": "已核实实际技能文件：.agents/skills/tein-video-workflow/SKILL.md"
           }
         ],
         "readmeHash": "792980b7ddf1d7c4eb806c2628b798610f7c6e8e40dc3ea4d03bb78102db4709",
@@ -16876,7 +16866,7 @@
       "sources": [
         "search:audio"
       ],
-      "skillEvidence": true,
+      "skillEvidence": false,
       "classification": {
         "aiRelated": true,
         "categories": [
@@ -16885,7 +16875,6 @@
           "agents"
         ],
         "forms": [
-          "skill",
           "mcp"
         ],
         "tags": [
@@ -16906,10 +16895,6 @@
           {
             "source": "topics",
             "text": "abc-notation, ai-music, covers, cuda, ggml, local-ai, music-generation, offline, rust, sheet-music, tauri, text-to-music"
-          },
-          {
-            "source": "readme",
-            "text": "发现 SKILL.md 引用或技能安装路径"
           }
         ],
         "readmeHash": "df447130699297a0f9bcaceb18fc19bbe44c311b8a2e02175e3fed1083f4e6a7",

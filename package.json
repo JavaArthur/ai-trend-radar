@@ -10,7 +10,8 @@
     "check": "astro check",
     "test": "tsx --test tests/*.test.ts",
     "collect": "tsx scripts/collect.ts",
-    "validate": "tsx scripts/validate.ts"
+    "validate": "tsx scripts/validate.ts",
+    "check:site": "tsx scripts/check-site.ts"
   },
   "dependencies": {
     "astro": "7.4.2",

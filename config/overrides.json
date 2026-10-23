@@ -1,316 +1,4 @@
 {
-  "1209966933": {
-    "summary": "使用 AI Agent 分析应用行为与原生二进制的逆向工程工具。适合探索软件行为和辅助代码分析。",
-    "categories": ["coding", "agents"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1100776768": {
-    "summary": "Anthropic 维护的 Claude Code 官方插件目录，集中提供可扩展编程助手能力的插件与技能。",
-    "categories": ["coding", "agents"],
-    "forms": ["resource", "skill"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "995029641": {
-    "summary": "用于协调多个 AI Agent 的运行框架，提供工作流编排、记忆与检索集成，可连接多种编程助手。",
-    "categories": ["agents", "knowledge", "coding"],
-    "forms": ["framework"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1183263320": {
-    "summary": "Android 官方面向 AI Agent 的模块化开发技能，使用 SKILL.md 和配套资源传递 Android 开发实践与工作流。",
-    "categories": ["coding", "agents"],
-    "forms": ["skill"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "975734319": {
-    "summary": "开源 AI 编程 Agent，帮助开发者通过自然语言开展代码修改与软件开发任务。",
-    "categories": ["coding", "agents"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1183888342": {
-    "summary": "管理多个编程 Agent 的工作空间，可使用自己的模型订阅，在桌面、移动端和远程运行环境中开展任务。",
-    "categories": ["coding", "agents"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1140229822": {
-    "summary": "Cursor 插件规范与官方插件集合，为扩展编辑器中的 Agent 能力提供参考实现和可安装内容。",
-    "categories": ["coding", "agents"],
-    "forms": ["resource", "skill"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1246148135": {
-    "summary": "为编程 Agent 命令行工具提供长期记忆，帮助在不同助手与模型服务之间交接任务上下文。",
-    "categories": ["knowledge", "coding", "agents"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1176011916": {
-    "summary": "将软件能力转换为适合 Agent 使用的命令行接口，帮助 AI 助手调用和操作现有工具。",
-    "categories": ["agents", "office", "coding"],
-    "forms": ["app", "skill"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "589831718": {
-    "summary": "基于节点与工作流的生成式 AI 界面及后端，可组合扩散模型和处理步骤，搭建图像等内容生成流程。",
-    "categories": ["image", "video", "models"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1206390571": {
-    "summary": "本地运行的开源语音工作室，整合声音克隆、声音设计、视频配音、转录和有声书制作功能。",
-    "categories": ["audio", "video"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1177402105": {
-    "summary": "面向 AI Agent 的 HTML 视频制作工具，通过编写网页式画面与动画来渲染视频，适合程序化视频创作。",
-    "categories": ["video", "coding"],
-    "forms": ["framework", "skill"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1079456184": {
-    "summary": "面向科学研究的 Agent Skills 集合，覆盖生物、化学、医学等领域，并连接科学数据库和研究工作流。",
-    "categories": ["data", "agents", "knowledge"],
-    "forms": ["skill", "resource"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1332781509": {
-    "summary": "可自选模型和沙箱环境的开源 AI 助手，提供类似 Grok Bot 的任务执行工作方式。",
-    "categories": ["agents", "office"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1273427276": {
-    "summary": "面向编程 Agent 的安全审计技能，组织多阶段审查流程，并输出经过独立核验的结构化发现。",
-    "categories": ["coding", "agents"],
-    "forms": ["skill"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1140828898": {
-    "summary": "Anthropic 面向知识工作者提供的 Claude Cowork 插件集合，用于扩展日常工作中的 AI 助手能力。",
-    "categories": ["office", "knowledge", "agents"],
-    "forms": ["resource"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1166129534": {
-    "summary": "面向自主 AI Agent 的运行环境，围绕私有执行和运行隔离组织工具调用及任务执行。",
-    "categories": ["agents", "coding"],
-    "forms": ["framework"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1172273835": {
-    "summary": "面向 Claude Skills 的安全研究技能库，以结构化 SKILL.md 组织不同攻击面的审查方法与专业上下文。",
-    "categories": ["coding", "agents"],
-    "forms": ["skill", "resource"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1057664813": {
-    "summary": "多语言语音生成模型，支持文本转语音、声音设计与声音克隆，适合构建语音合成应用。",
-    "categories": ["audio", "models"],
-    "forms": ["model"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1223939135": {
-    "summary": "可自托管的 AI 销售与客户管理系统，结合原生 Agent 和 WhatsApp 等渠道处理销售对话与业务流程。",
-    "categories": ["office", "agents"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "638951438": {
-    "summary": "用于调试、评测和监控 LLM 应用的平台，提供调用追踪、自动评测与 Agent 工作流观测能力。",
-    "categories": ["data", "agents"],
-    "forms": ["app", "framework"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "839037098": {
-    "summary": "使用 TypeScript 构建 AI 应用和 Agent 的框架，适合将模型能力整合到应用工作流中。",
-    "categories": ["agents", "coding"],
-    "forms": ["framework"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "642497346": {
-    "summary": "开源 LLM 与 Agent 可观测性平台，集中记录调用链、开展评测，并帮助改进 AI 应用表现。",
-    "categories": ["data", "agents"],
-    "forms": ["app", "framework"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1156137396": {
-    "summary": "桌面 AI Agent，可执行数据分析、幻灯片、文档和视频等任务，并支持从微信、飞书等渠道发送指令。",
-    "categories": ["office", "agents"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "944080744": {
-    "summary": "面向 AI Agent 的企业知识上下文平台，将多个办公与开发系统中的内容整理为可搜索、可引用的工作空间。",
-    "categories": ["knowledge", "office", "agents"],
-    "forms": ["app", "mcp"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1197569406": {
-    "summary": "本地优先的编程 Agent 桌面工作台，整合多助手协作、Git Worktree、代码差异与技能管理，支持远程访问。",
-    "categories": ["coding", "agents"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "725205304": {
-    "summary": "用于本地运行和训练语言模型、扩散模型的工具与界面，覆盖多种模型格式和微调工作流。",
-    "categories": ["models", "image"],
-    "forms": ["framework", "app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "391740664": {
-    "summary": "为数据与 AI 应用建立可信业务上下文的开源平台，组织数据元信息，帮助人员和 Agent 理解数据。",
-    "categories": ["data", "knowledge"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1162516847": {
-    "summary": "通过 YAML 配置组织语言模型微调，使用分层流式处理降低训练流程对显存的要求。",
-    "categories": ["models"],
-    "forms": ["framework"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "818331198": {
-    "summary": "面向 Python 的类型化 AI 应用框架，覆盖 Agent、实时语音、图像生成和嵌入等模型接口。",
-    "categories": ["agents", "coding"],
-    "forms": ["framework"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "605673387": {
-    "summary": "基于大模型的知识库平台，提供数据处理、RAG 检索和可视化 AI 工作流编排，用于搭建问答系统。",
-    "categories": ["knowledge", "agents", "office"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1166182351": {
-    "summary": "为 Apple Silicon 构建的 MLX 语言模型推理服务，提供兼容模型接口，并关注编程 Agent 的工具调用。",
-    "categories": ["models", "coding"],
-    "forms": ["framework"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1218208502": {
-    "summary": "面向中文网文创作的 Agent Skills，覆盖选题分析、拆文、写作、润色和封面，并通过文件跟踪长篇连贯性。",
-    "categories": ["content", "image"],
-    "forms": ["skill"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1174289380": {
-    "summary": "AI 短剧制作工作台，从剧本输入到分镜、角色一致性管理、镜头准备、视频生成与导出。",
-    "categories": ["video", "image"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1193300953": {
-    "summary": "从剧本到成片的 AIGC 视频制作引擎，可用于短剧、广告、电商产品视频等创作流程。",
-    "categories": ["video", "content"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1016509116": {
-    "summary": "跨平台 AI 短视频制作工具，面向产品营销和内容创作，支持批量生成与自动剪辑。",
-    "categories": ["video", "content"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1217942969": {
-    "summary": "图像生成与编辑的 Agent Skill 和命令行工具，附带提示词图库，方便探索和复用图片创作方式。",
-    "categories": ["image"],
-    "forms": ["skill"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "832879402": {
-    "summary": "构建、评测与优化 AI 系统的工具，整合 RAG、Agent、微调、合成数据生成和数据集管理。",
-    "categories": ["data", "models", "agents"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "362500938": {
-    "summary": "让 AI 工程师与领域专家协作构建高质量数据集的工具，适合组织数据反馈、整理和标注流程。",
-    "categories": ["data"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1302986554": {
-    "summary": "面向 Claude Code 和 Codex 的 AI 短剧技能合集，覆盖剧本、角色资产、分镜、图像与视频提示词和审查。",
-    "categories": ["video", "image", "content"],
-    "forms": ["skill", "resource"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "951429064": {
-    "summary": "通过 MCP 让大模型操作 Ableton Live，支持创建轨道、编排片段和音乐创作。",
-    "categories": ["audio", "agents"],
-    "forms": ["mcp"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1371687666": {
-    "summary": "本地 AI 音频与音乐工作室，支持语音合成、声音克隆、带歌词歌曲和多轨配乐创作。",
-    "categories": ["audio"],
-    "forms": ["app"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1159261054": {
-    "summary": "面向编程 Agent 的视频播客制作技能，将主题、配音、素材管理与 Remotion 合成串成视频创作流程。",
-    "categories": ["video", "audio", "content"],
-    "forms": ["skill"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1340743476": {
-    "summary": "制作 AI 主持人视频的 Codex Skill，根据脚本和已获授权的人像组织生成与验证流程，接口不绑定单一供应商。",
-    "categories": ["video", "image"],
-    "forms": ["skill"],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "1226205410": {
-    "aiRelated": false,
-    "reason": "通用基础工具或非 AI 主体项目，首批精选不将间接出现的 AI 关键词视为核心用途。"
-  },
   "33884891": {
     "aiRelated": false,
     "reason": "通用基础工具或非 AI 主体项目，首批精选不将间接出现的 AI 关键词视为核心用途。"
@@ -318,5 +6,572 @@
   "180136168": {
     "aiRelated": false,
     "reason": "通用基础工具或非 AI 主体项目，首批精选不将间接出现的 AI 关键词视为核心用途。"
+  },
+  "362500938": {
+    "summary": "让 AI 工程师与领域专家协作构建高质量数据集的工具，适合组织数据反馈、整理和标注流程。",
+    "categories": [
+      "data"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "391740664": {
+    "summary": "为数据与 AI 应用建立可信业务上下文的开源平台，组织数据元信息，帮助人员和 Agent 理解数据。",
+    "categories": [
+      "data",
+      "knowledge"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "589831718": {
+    "summary": "基于节点与工作流的生成式 AI 界面及后端，可组合扩散模型和处理步骤，搭建图像等内容生成流程。",
+    "categories": [
+      "image",
+      "video",
+      "models"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "605673387": {
+    "summary": "基于大模型的知识库平台，提供数据处理、RAG 检索和可视化 AI 工作流编排，用于搭建问答系统。",
+    "categories": [
+      "knowledge",
+      "agents",
+      "office"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "638951438": {
+    "summary": "用于调试、评测和监控 LLM 应用的平台，提供调用追踪、自动评测与 Agent 工作流观测能力。",
+    "categories": [
+      "data",
+      "agents"
+    ],
+    "forms": [
+      "app",
+      "framework"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "642497346": {
+    "summary": "开源 LLM 与 Agent 可观测性平台，集中记录调用链、开展评测，并帮助改进 AI 应用表现。",
+    "categories": [
+      "data",
+      "agents"
+    ],
+    "forms": [
+      "app",
+      "framework"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "725205304": {
+    "summary": "用于本地运行和训练语言模型、扩散模型的工具与界面，覆盖多种模型格式和微调工作流。",
+    "categories": [
+      "models",
+      "image"
+    ],
+    "forms": [
+      "framework",
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "818331198": {
+    "summary": "面向 Python 的类型化 AI 应用框架，覆盖 Agent、实时语音、图像生成和嵌入等模型接口。",
+    "categories": [
+      "agents",
+      "coding"
+    ],
+    "forms": [
+      "framework"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "832879402": {
+    "summary": "构建、评测与优化 AI 系统的工具，整合 RAG、Agent、微调、合成数据生成和数据集管理。",
+    "categories": [
+      "data",
+      "models",
+      "agents"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "839037098": {
+    "summary": "使用 TypeScript 构建 AI 应用和 Agent 的框架，适合将模型能力整合到应用工作流中。",
+    "categories": [
+      "agents",
+      "coding"
+    ],
+    "forms": [
+      "framework"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "944080744": {
+    "summary": "面向 AI Agent 的企业知识上下文平台，将多个办公与开发系统中的内容整理为可搜索、可引用的工作空间。",
+    "categories": [
+      "knowledge",
+      "office",
+      "agents"
+    ],
+    "forms": [
+      "app",
+      "mcp"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "951429064": {
+    "summary": "通过 MCP 让大模型操作 Ableton Live，支持创建轨道、编排片段和音乐创作。",
+    "categories": [
+      "audio",
+      "agents"
+    ],
+    "forms": [
+      "mcp"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "975734319": {
+    "summary": "开源 AI 编程 Agent，帮助开发者通过自然语言开展代码修改与软件开发任务。",
+    "categories": [
+      "coding",
+      "agents"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "995029641": {
+    "summary": "用于协调多个 AI Agent 的运行框架，提供工作流编排、记忆与检索集成，可连接多种编程助手。",
+    "categories": [
+      "agents",
+      "knowledge",
+      "coding"
+    ],
+    "forms": [
+      "framework"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1016509116": {
+    "summary": "跨平台 AI 短视频制作工具，面向产品营销和内容创作，支持批量生成与自动剪辑。",
+    "categories": [
+      "video",
+      "content"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1057664813": {
+    "summary": "多语言语音生成模型，支持文本转语音、声音设计与声音克隆，适合构建语音合成应用。",
+    "categories": [
+      "audio",
+      "models"
+    ],
+    "forms": [
+      "model"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1079456184": {
+    "summary": "面向科学研究的 Agent Skills 集合，覆盖生物、化学、医学等领域，并连接科学数据库和研究工作流。",
+    "categories": [
+      "data",
+      "agents",
+      "knowledge"
+    ],
+    "forms": [
+      "skill",
+      "resource"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1100776768": {
+    "summary": "Anthropic 维护的 Claude Code 官方插件目录，集中提供可扩展编程助手能力的插件与技能。",
+    "categories": [
+      "coding",
+      "agents"
+    ],
+    "forms": [
+      "resource",
+      "skill"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1140229822": {
+    "summary": "Cursor 插件规范与官方插件集合，为扩展编辑器中的 Agent 能力提供参考实现和可安装内容。",
+    "categories": [
+      "coding",
+      "agents"
+    ],
+    "forms": [
+      "resource",
+      "skill"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1140828898": {
+    "summary": "Anthropic 面向知识工作者提供的 Claude Cowork 插件集合，用于扩展日常工作中的 AI 助手能力。",
+    "categories": [
+      "office",
+      "knowledge",
+      "agents"
+    ],
+    "forms": [
+      "resource"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1156137396": {
+    "summary": "桌面 AI Agent，可执行数据分析、幻灯片、文档和视频等任务，并支持从微信、飞书等渠道发送指令。",
+    "categories": [
+      "office",
+      "agents"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1159261054": {
+    "summary": "面向编程 Agent 的视频播客制作技能，将主题、配音、素材管理与 Remotion 合成串成视频创作流程。",
+    "categories": [
+      "video",
+      "audio",
+      "content"
+    ],
+    "forms": [
+      "skill"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1162516847": {
+    "summary": "通过 YAML 配置组织语言模型微调，使用分层流式处理降低训练流程对显存的要求。",
+    "categories": [
+      "models"
+    ],
+    "forms": [
+      "framework"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1166129534": {
+    "summary": "面向自主 AI Agent 的运行环境，围绕私有执行和运行隔离组织工具调用及任务执行。",
+    "categories": [
+      "agents",
+      "coding"
+    ],
+    "forms": [
+      "framework"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1166182351": {
+    "summary": "为 Apple Silicon 构建的 MLX 语言模型推理服务，提供兼容模型接口，并关注编程 Agent 的工具调用。",
+    "categories": [
+      "models",
+      "coding"
+    ],
+    "forms": [
+      "framework"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1172273835": {
+    "summary": "面向 Claude Skills 的安全研究技能库，以结构化 SKILL.md 组织不同攻击面的审查方法与专业上下文。",
+    "categories": [
+      "coding",
+      "agents"
+    ],
+    "forms": [
+      "skill",
+      "resource"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1174289380": {
+    "summary": "AI 短剧制作工作台，从剧本输入到分镜、角色一致性管理、镜头准备、视频生成与导出。",
+    "categories": [
+      "video",
+      "image"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1176011916": {
+    "summary": "将软件能力转换为适合 Agent 使用的命令行接口，帮助 AI 助手调用和操作现有工具。",
+    "categories": [
+      "agents",
+      "office",
+      "coding"
+    ],
+    "forms": [
+      "app",
+      "skill"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1177402105": {
+    "summary": "面向 AI Agent 的 HTML 视频制作工具，通过编写网页式画面与动画来渲染视频，适合程序化视频创作。",
+    "categories": [
+      "video",
+      "coding"
+    ],
+    "forms": [
+      "framework",
+      "skill"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1183263320": {
+    "summary": "Android 官方面向 AI Agent 的模块化开发技能，使用 SKILL.md 和配套资源传递 Android 开发实践与工作流。",
+    "categories": [
+      "coding",
+      "agents"
+    ],
+    "forms": [
+      "skill"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1183888342": {
+    "summary": "管理多个编程 Agent 的工作空间，可使用自己的模型订阅，在桌面、移动端和远程运行环境中开展任务。",
+    "categories": [
+      "coding",
+      "agents"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1193300953": {
+    "summary": "从剧本到成片的 AIGC 视频制作引擎，可用于短剧、广告、电商产品视频等创作流程。",
+    "categories": [
+      "video",
+      "content"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1197569406": {
+    "summary": "本地优先的编程 Agent 桌面工作台，整合多助手协作、Git Worktree、代码差异与技能管理，支持远程访问。",
+    "categories": [
+      "coding",
+      "agents"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1206390571": {
+    "summary": "本地运行的开源语音工作室，整合声音克隆、声音设计、视频配音、转录和有声书制作功能。",
+    "categories": [
+      "audio",
+      "video"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1209966933": {
+    "summary": "使用 AI Agent 分析应用行为与原生二进制的逆向工程工具。适合探索软件行为和辅助代码分析。",
+    "categories": [
+      "coding",
+      "agents"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1217942969": {
+    "summary": "图像生成与编辑的 Agent Skill 和命令行工具，附带提示词图库，方便探索和复用图片创作方式。",
+    "categories": [
+      "image"
+    ],
+    "forms": [
+      "skill"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1218208502": {
+    "summary": "面向中文网文创作的 Agent Skills，覆盖选题分析、拆文、写作、润色和封面，并通过文件跟踪长篇连贯性。",
+    "categories": [
+      "content",
+      "image"
+    ],
+    "forms": [
+      "skill"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1223939135": {
+    "summary": "可自托管的 AI 销售与客户管理系统，结合原生 Agent 和 WhatsApp 等渠道处理销售对话与业务流程。",
+    "categories": [
+      "office",
+      "agents"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1226205410": {
+    "aiRelated": false,
+    "reason": "通用基础工具或非 AI 主体项目，首批精选不将间接出现的 AI 关键词视为核心用途。"
+  },
+  "1246148135": {
+    "summary": "为编程 Agent 命令行工具提供长期记忆，帮助在不同助手与模型服务之间交接任务上下文。",
+    "categories": [
+      "knowledge",
+      "coding",
+      "agents"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1273427276": {
+    "summary": "面向编程 Agent 的安全审计技能，组织多阶段审查流程，并输出经过独立核验的结构化发现。",
+    "categories": [
+      "coding",
+      "agents"
+    ],
+    "forms": [
+      "skill"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1302986554": {
+    "summary": "面向 Claude Code 和 Codex 的 AI 短剧技能合集，覆盖剧本、角色资产、分镜、图像与视频提示词和审查。",
+    "categories": [
+      "video",
+      "image",
+      "content"
+    ],
+    "forms": [
+      "skill",
+      "resource"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1332781509": {
+    "summary": "可自选模型和沙箱环境的开源 AI 助手，提供类似 Grok Bot 的任务执行工作方式。",
+    "categories": [
+      "agents",
+      "office"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1340743476": {
+    "summary": "制作 AI 主持人视频的 Codex Skill，根据脚本和已获授权的人像组织生成与验证流程，接口不绑定单一供应商。",
+    "categories": [
+      "video",
+      "image"
+    ],
+    "forms": [
+      "skill"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1371687666": {
+    "summary": "本地 AI 音频与音乐工作室，支持语音合成、声音克隆、带歌词歌曲和多轨配乐创作。",
+    "categories": [
+      "audio"
+    ],
+    "forms": [
+      "app"
+    ],
+    "aiRelated": true,
+    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "218952803": {
+    "aiRelated": true,
+    "categories": [
+      "content",
+      "office"
+    ],
+    "forms": [
+      "app"
+    ],
+    "summary": "带有 AI 助手的微信 Markdown 编辑器，支持公众号排版、自定义主题、内容管理与多图床，适合整理和发布公众号文章。",
+    "tags": [
+      "公众号排版",
+      "Markdown",
+      "AI 助手"
+    ],
+    "reason": "依据 GitHub 仓库简介校订，明确具备 AI 助手及微信 Markdown 编辑能力。"
   }
 }
