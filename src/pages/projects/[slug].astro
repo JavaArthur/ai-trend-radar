@@ -1,27 +1,324 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import raw from '../../../data/catalog.json';
-import type {Catalog,Project} from '../../lib/types';
-import {metrics} from '../../lib/metrics';
-import {categoryName,formName} from '../../lib/taxonomy';
-import {number,datetime,sparkline} from '../../lib/display';
-export function getStaticPaths(){return (raw as Catalog).projects.filter(p=>p.classification.aiRelated).map(project=>({params:{slug:project.slug},props:{project}}));}
-const {project:p}=Astro.props as {project:Project};const c=p.classification;const m=metrics(p);const base=import.meta.env.BASE_URL.replace(/\/$/,'');const points=sparkline(p.snapshots.slice(-30));
-const weekly=(raw as Catalog).trending.weekly.entries.find(e=>e.fullName.toLowerCase()===p.fullName.toLowerCase());
+import Layout from "../../layouts/Layout.astro";
+import raw from "../../../data/catalog.json";
+import type { Catalog, Project } from "../../lib/types";
+import { metrics } from "../../lib/metrics";
+import { categoryName } from "../../lib/taxonomy";
+import { family, directoryCategories } from "../../lib/directory";
+import { number, datetime, sparkline } from "../../lib/display";
+import { loadReadmes } from "../../lib/readme-store";
+import { renderReadme, sourceUrl } from "../../lib/readme";
+export function getStaticPaths() {
+  return (raw as Catalog).projects
+    .filter((p) => p.classification.aiRelated)
+    .map((project) => ({ params: { slug: project.slug }, props: { project } }));
+}
+const { project: p } = Astro.props as { project: Project };
+const c = p.classification;
+const m = metrics(p);
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const points = sparkline(p.snapshots.slice(-30));
+const weekly = (raw as Catalog).trending.weekly.entries.find(
+  (e) => e.fullName.toLowerCase() === p.fullName.toLowerCase(),
+);
+const bundle = await loadReadmes(p.id);
+const files = bundle?.files || [];
+const initial =
+  files.find((f) => f.language === "zh")?.language || files[0]?.language;
 ---
-<Layout title={`${p.fullName} · AI 热榜雷达`} description={c.summary||p.description}>
-<main id="main" class="detail-wrap" data-name={p.fullName}>
-<a class="back-link" href={`${base}/#explore`}>← 返回项目目录</a>
-<div class="detail-head"><div><span class="detail-owner">{p.fullName.split('/')[0]} /</span><h1>{p.fullName.split('/')[1]}</h1><div class="card-tags">{c.categories.map(id=><a href={`${base}/?category=${id}&view=all#explore`}><span>{categoryName(id)}</span></a>)}{c.forms.map(id=><span class="shape-tag">{formName(id)}</span>)}</div></div><span class="detail-status">{p.archived?'已归档':p.unavailable?'仓库暂不可用':!m.active?'近期未维护':m.rising?'持续上升':m.hot?'近期热门':'趋势观察中'}</span></div>
-<p class="detail-summary">{c.summary||p.description||'项目未提供简介。'}</p><p class="fine">{c.status==='rules'?'原始仓库简介 · 中文摘要待补充':c.status==='manual'?'中文简介经编辑校订':'AI 根据仓库资料整理'} · {c.tags.join(' / ')}</p>
-<div class="detail-actions"><a class="button dark" href={p.url} target="_blank" rel="noopener noreferrer">查看 GitHub 仓库 ↗</a>{p.homepage&&/^https?:\/\//.test(p.homepage)&&<a class="button light" href={p.homepage} target="_blank" rel="noopener noreferrer">项目主页 ↗</a>}<button class="save-button" data-save={p.id} aria-label={`收藏 ${p.fullName}`} aria-pressed="false">☆</button></div>
-<div class="detail-grid"><section class="detail-box"><h2>热度，来自实际观测</h2><dl><div><dt>总 Star</dt><dd>{number(p.stars)}</dd></div><div><dt>近 7 天净增</dt><dd>{m.delta===null?'观察中':`${m.delta>=0?'+':''}${number(m.delta)}`}</dd></div><div><dt>近 7 天增长率</dt><dd>{m.rate===null?'—':`${(m.rate*100).toFixed(1)}%`}</dd></div><div><dt>已记录快照</dt><dd>{p.snapshots.length}<span class="fine"> 天</span></dd></div></dl>
-{points?<svg class="detail-chart" viewBox="0 0 240 60" preserveAspectRatio="none" role="img" aria-label="最近最多30个真实快照的 Star 走势"><polyline points={points}/></svg>:<div class="chart-empty">第一颗观测点已经记录。<br/>积累更多快照后，这里会显示真实趋势。</div>}
-<p class="fine">{m.from?`实际区间：${datetime(m.from)} — ${datetime(m.to)}。${m.complete?'日快照完整。':'区间有缺测，不能判断持续上升。'}`:'尚无约 7 天前的观测数据，不计算或估算周净增。'}</p>
-{weekly&&<p class="fine">GitHub 官方周榜排名 #{weekly.rank} · 官方本周增长 {weekly.starsInPeriod===null?'未提供':number(weekly.starsInPeriod)} Star。<br/>周榜抓取：{datetime((raw as Catalog).trending.weekly.fetchedAt)}；与本站净增统计口径不同。</p>}
-<p class="fine"><a href={`${base}/about/`}>查看数据口径 ↗</a></p></section>
-<section class="detail-box"><h2>项目档案</h2><div class="facts">{[['主要语言',p.language||'未标注'],['许可证',p.license==='NOASSERTION'?'未识别，请查阅仓库':p.license||'未提供'],['Fork',number(p.forks)],['最近推送',datetime(p.pushedAt)],['仓库创建',datetime(p.createdAt)],['本站发现',datetime(p.firstSeenAt)],['数据更新',datetime(p.fetchedAt)]].map(([label,value])=><div class="fact"><span>{label}</span><strong>{value}</strong></div>)}</div></section></div>
-<section class="detail-box evidence"><h2>收录与分类依据</h2>{c.evidence.map(e=><p><strong>{({description:'仓库简介',topics:'GitHub Topics',readme:'README 依据',manual:'编辑校订'})[e.source]}：</strong>{e.text}</p>)}<p class="fine">发现来源：{p.sources.map(s=>s==='trending'?'GitHub Trending':s.startsWith('search:')?`分类检索 · ${categoryName(s.slice(7))}`:'持续跟踪').join(' / ')}</p></section>
-</main>
-<script>import '../../lib/client';</script>
+
+<Layout
+  title={`${p.fullName} · AI 热榜雷达`}
+  description={c.summary || p.description}
+>
+  <main id="main" class="detail-wrap" data-name={p.fullName}>
+    <a
+      class="back-link"
+      href={`${base}/?family=${family(p) || "skills"}#explore`}
+    >
+      ← 继续发现工具
+    </a>
+    <div class="detail-head">
+      <div>
+        <span class="detail-owner">{p.fullName.split("/")[0]} /</span>
+        <h1>{p.fullName.split("/")[1]}</h1>
+        <div class="card-tags">
+          {directoryCategories(p).map((id) => (
+            <a
+              href={`${base}/?family=${family(p) || "skills"}&category=${id}#explore`}
+            >
+              {categoryName(id)}
+              {family(p) === "skills" ? " Skill" : ""}
+            </a>
+          ))}
+        </div>
+      </div>
+      <span class="detail-status">
+        {p.archived
+          ? "已归档"
+          : p.unavailable
+            ? "仓库暂不可用"
+            : !m.active
+              ? "近期未维护"
+              : m.rising
+                ? "持续上升"
+                : m.hot
+                  ? "近期热门"
+                  : "趋势观察中"}
+      </span>
+    </div>
+    <p class="detail-summary">
+      {c.summary || p.description || "项目未提供简介。"}
+    </p>
+    <p class="fine">
+      {c.status === "rules"
+        ? "原始仓库简介 · 中文摘要待补充"
+        : c.status === "manual"
+          ? "中文简介经编辑校订"
+          : "AI 根据仓库资料整理"}{" "}
+      · {c.tags.join(" / ")}
+    </p>
+    <div class="detail-actions">
+      <a
+        class="button dark"
+        href={p.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub 仓库 ↗
+      </a>
+      {p.homepage && /^https?:\/\//.test(p.homepage) && (
+        <a
+          class="button light"
+          href={p.homepage}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          项目主页 ↗
+        </a>
+      )}
+      {p.fullName === "remotion-dev/skills" && (
+        <a
+          class="button light"
+          href="https://github.com/remotion-dev/remotion"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Remotion 主项目 ↗
+        </a>
+      )}
+      <button
+        class="save-button"
+        data-save={p.id}
+        aria-label={`收藏 ${p.fullName}`}
+        aria-pressed="false"
+      >
+        ☆
+      </button>
+    </div>
+    <div class="reader-layout">
+      <section class="readme-reader" aria-label="项目 README">
+        <div class="reader-top">
+          <h2>
+            README <span class="fine">/ 项目原文</span>
+          </h2>
+          <div class="readme-tabs" role="tablist" aria-label="README 语言">
+            {(["zh", "en"] as const).map((language) => (
+              <button
+                id={`tab-${language}`}
+                role="tab"
+                data-readme-tab={language}
+                aria-selected={initial === language ? "true" : "false"}
+                aria-controls={`panel-${language}`}
+                tabindex={initial === language ? 0 : -1}
+                disabled={!files.some((f) => f.language === language)}
+                title={
+                  files.some((f) => f.language === language)
+                    ? "切换 README 语言"
+                    : "仓库未提供此语言的 README"
+                }
+              >
+                {language === "zh" ? "中文" : "English"}
+              </button>
+            ))}
+          </div>
+        </div>
+        {bundle?.error && <p class="readme-language-note">{bundle.error}</p>}
+        {files.length === 1 && (
+          <p class="readme-language-note">
+            仓库未提供{files[0].language === "zh" ? "英文" : "中文"}{" "}
+            README，当前显示作者提供的原文。
+          </p>
+        )}
+        {files.length > 0 && bundle ? (
+          files.map((file) => (
+            <section
+              id={`panel-${file.language}`}
+              role="tabpanel"
+              aria-labelledby={`tab-${file.language}`}
+              data-readme-panel={file.language}
+              hidden={file.language !== initial}
+              lang={file.language === "zh" ? "zh-CN" : "en"}
+            >
+              <div class="readme-source">
+                <a
+                  href={sourceUrl(bundle, file)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {file.path} ↗
+                </a>
+                <span>抓取于 {datetime(file.fetchedAt)}</span>
+              </div>
+              {file.redactions ? (
+                <p class="readme-language-note">
+                  原文中的凭据样式已隐藏，其余内容保留。
+                </p>
+              ) : null}
+              <div
+                class="readme-content"
+                set:html={renderReadme(bundle, file)}
+              />
+            </section>
+          ))
+        ) : (
+          <div class="readme-content">
+            <p>README 正在排队抓取，暂时可以到仓库阅读。</p>
+            <a
+              href={`${p.url}#readme`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              前往 GitHub 阅读 README ↗
+            </a>
+          </div>
+        )}
+        {(["zh", "en"] as const)
+          .filter((language) => !files.some((f) => f.language === language))
+          .map((language) => (
+            <div
+              id={`panel-${language}`}
+              role="tabpanel"
+              aria-labelledby={`tab-${language}`}
+              hidden
+            />
+          ))}
+      </section>
+      <aside class="detail-aside" aria-label="项目观测与档案">
+        <section class="detail-box">
+          <h2>热度有据可查</h2>
+          <dl>
+            <div>
+              <dt>累计 Star</dt>
+              <dd>{number(p.stars)}</dd>
+            </div>
+            <div>
+              <dt>近 7 天净增</dt>
+              <dd>
+                {m.delta === null
+                  ? "观察中"
+                  : `${m.delta >= 0 ? "+" : ""}${number(m.delta)}`}
+              </dd>
+            </div>
+          </dl>
+          {points ? (
+            <svg
+              class="detail-chart"
+              viewBox="0 0 240 60"
+              preserveAspectRatio="none"
+              role="img"
+              aria-label="最近最多30个真实快照的 Star 走势"
+            >
+              <polyline points={points} />
+            </svg>
+          ) : (
+            <div class="chart-empty">
+              已开始记录真实快照。
+              <br />
+              数据积累后展示趋势。
+            </div>
+          )}
+          <p class="fine">
+            {m.from
+              ? `实际区间：${datetime(m.from)} — ${datetime(m.to)}。${m.complete ? "日快照完整。" : "区间有缺测。"} 增长率 ${m.rate === null ? "—" : (m.rate * 100).toFixed(1) + "%"}`
+              : "尚无约 7 天前的观测，不估算周净增。"}{" "}
+            已有 {p.snapshots.length} 天观测。
+          </p>
+          {weekly && (
+            <p class="fine">
+              GitHub 周榜 #{weekly.rank} · 官方本周增长{" "}
+              {weekly.starsInPeriod === null
+                ? "未提供"
+                : number(weekly.starsInPeriod)}{" "}
+              Star。
+              <br />
+              周榜抓取：{datetime((raw as Catalog).trending.weekly.fetchedAt)}。
+            </p>
+          )}
+          <p class="fine">
+            <a href={`${base}/about/`}>统计口径 ↗</a>
+          </p>
+        </section>
+        <section class="detail-box">
+          <h2>项目档案</h2>
+          <div class="facts">
+            {[
+              ["主要语言", p.language || "未标注"],
+              [
+                "许可证",
+                p.license === "NOASSERTION"
+                  ? "未识别，请查阅仓库"
+                  : p.license || "未提供",
+              ],
+              ["Fork", number(p.forks)],
+              ["最近推送", datetime(p.pushedAt)],
+              ["本站发现", datetime(p.firstSeenAt)],
+              ["数据更新", datetime(p.fetchedAt)],
+            ].map(([label, value]) => (
+              <div class="fact">
+                <span>{label}</span>
+                <strong>{value}</strong>
+              </div>
+            ))}
+          </div>
+        </section>
+        <details class="detail-box evidence">
+          <summary>收录与分类依据</summary>
+          {c.evidence.map((e) => (
+            <p>
+              <strong>
+                {
+                  {
+                    description: "仓库简介",
+                    topics: "GitHub Topics",
+                    readme: "README 依据",
+                    manual: "编辑校订",
+                  }[e.source]
+                }
+                ：
+              </strong>
+              {e.text}
+            </p>
+          ))}
+          <p class="fine">
+            发现来源：
+            {p.sources
+              .map((s) =>
+                s === "trending"
+                  ? "GitHub Trending"
+                  : s === "editorial"
+                    ? "编辑推荐"
+                    : s.startsWith("search:")
+                      ? `分类检索 · ${categoryName(s.slice(7))}`
+                      : "持续跟踪",
+              )
+              .join(" / ")}
+          </p>
+        </details>
+      </aside>
+    </div>
+  </main>
+  <script>
+    import "../../lib/client";
+  </script>
 </Layout>

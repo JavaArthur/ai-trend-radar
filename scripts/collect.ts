@@ -7,6 +7,8 @@ import { parseTrending, retainTrend } from "../src/lib/trending";
 import { enrich, providerAllowed, type Usage } from "../src/lib/ai";
 import type { Catalog, Project, Override } from "../src/lib/types";
 import settings from "../config/settings.json";
+import { family, featuredNames } from "../src/lib/directory";
+import { loadReadmes, refreshReadmes } from "../src/lib/readme-store";
 const at = new Date().toISOString();
 const day = at.slice(0, 10);
 const catalog: Catalog = JSON.parse(
@@ -66,6 +68,13 @@ for (const name of trendNames) {
     warnings.push(`无法读取 ${name}`);
   }
 }
+for (const name of featuredNames) {
+  try {
+    offer(await github.get(`/repos/${name}`), "editorial");
+  } catch {
+    warnings.push(`推荐项目暂不可用 ${name}`);
+  }
+}
 const recent = new Date(Date.now() - 90 * 86400000).toISOString().slice(0, 10);
 for (const [category, q] of queries) {
   console.log(`检索分类 ${category}`);
@@ -100,7 +109,7 @@ for (const old of existing) {
     warnings.push(`未更新 ${old.fullName}`);
   }
 }
-for (const name of trendNames) {
+for (const name of [...featuredNames, ...trendNames]) {
   const r = [...candidates.values()].find(
     (r) => r.full_name.toLowerCase() === name.toLowerCase(),
   );
@@ -231,6 +240,30 @@ if (!refreshed) throw new Error("本轮没有成功更新任何仓库，未覆�
 catalog.projects = [...result.values()].filter(
   (p) => !(overrides[String(p.id)] || overrides[p.fullName])?.exclude,
 );
+// Refresh a bounded queue after core observations. Failures keep the last successful README.
+const readmeQueue = await Promise.all(
+  catalog.projects
+    .filter((p) => family(p))
+    .map(async (p) => ({ p, bundle: await loadReadmes(p.id) })),
+);
+readmeQueue.sort((a, b) =>
+  (a.bundle?.checkedAt || "").localeCompare(b.bundle?.checkedAt || ""),
+);
+let readmeUpdates = 0;
+for (const { p, bundle } of readmeQueue) {
+  if (readmeUpdates >= 35 || github.count > settings.githubRequestBudget - 8)
+    break;
+  if (
+    bundle &&
+    !bundle.error &&
+    Date.parse(bundle.checkedAt) >= Date.parse(p.pushedAt) &&
+    Date.parse(at) - Date.parse(bundle.checkedAt) < 7 * 86400000
+  )
+    continue;
+  const updated = await refreshReadmes(github, p);
+  if (updated.error) warnings.push(`README ${p.fullName} 暂未更新`);
+  readmeUpdates++;
+}
 catalog.generatedAt = at;
 catalog.lastSuccessfulCollectionAt = at;
 catalog.warnings = warnings;

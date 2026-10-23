@@ -1,225 +1,248 @@
-declare global {
-  interface Window {
-    __radar: {
-      lastUpdated: string | null;
-      weeklyAt: string | null;
-      weeklyError?: string;
-      observed: number;
-    };
-  }
-}
-const $ = <T extends HTMLElement = HTMLElement>(selector: string) =>
-  document.querySelector<T>(selector)!;
-const cards = [...document.querySelectorAll<HTMLElement>(".project-card")];
 const key = "ai-trend-radar:favorites:v1";
 let saved = new Set<string>();
 try {
-  const data = JSON.parse(localStorage.getItem(key) || "[]");
-  if (Array.isArray(data)) saved = new Set(data.map(String));
-} catch {}
-let render = () => {};
-const state = {
-  category: "all",
-  form: "all",
-  view: "weekly",
-  query: "",
-  favorites: false,
-};
-function saveUI() {
-  document.querySelectorAll<HTMLButtonElement>("[data-save]").forEach((b) => {
-    const yes = saved.has(b.dataset.save!);
-    b.textContent = yes ? "★" : "☆";
-    b.classList.toggle("saved", yes);
-    b.setAttribute("aria-pressed", String(yes));
-    b.setAttribute(
-      "aria-label",
-      `${yes ? "取消收藏" : "收藏"} ${b.closest("[data-name]")?.getAttribute("data-name") || "此项目"}`,
-    );
-  });
+  const value = JSON.parse(localStorage.getItem(key) || "[]");
+  if (Array.isArray(value)) saved = new Set(value.map(String));
+} catch {
+  /* private mode */
+}
+function updateFavorites() {
+  document
+    .querySelectorAll<HTMLButtonElement>("[data-save]")
+    .forEach((button) => {
+      const active = saved.has(button.dataset.save!);
+      button.setAttribute("aria-pressed", String(active));
+      button.textContent = active ? "★" : "☆";
+      button.title = active ? "取消收藏" : "收藏项目";
+    });
   const count = document.querySelector("#favorite-count");
   if (count) count.textContent = String(saved.size);
 }
-document.querySelectorAll<HTMLButtonElement>("[data-save]").forEach((b) =>
-  b.addEventListener("click", () => {
-    const id = b.dataset.save!;
+document.querySelectorAll<HTMLButtonElement>("[data-save]").forEach((button) =>
+  button.addEventListener("click", () => {
+    const id = button.dataset.save!;
     saved.has(id) ? saved.delete(id) : saved.add(id);
     try {
       localStorage.setItem(key, JSON.stringify([...saved]));
     } catch {}
-    saveUI();
-    if (cards.length) render();
+    updateFavorites();
+    renderDirectory?.();
   }),
 );
-saveUI();
-if (cards.length || document.querySelector("#cards")) {
+updateFavorites();
+let renderDirectory: (() => void) | undefined;
+const grid = document.querySelector<HTMLElement>("#project-grid");
+if (grid) {
+  const cards = [...grid.querySelectorAll<HTMLElement>(".project-card")];
   const params = new URLSearchParams(location.search);
-  state.query = params.get("q") || "";
-  state.category = params.get("category") || "all";
-  state.form = params.get("form") || "all";
+  const search = document.querySelector<HTMLInputElement>("#search")!;
+  const select = document.querySelector<HTMLSelectElement>("#view")!;
+  const state = {
+    family: params.get("family") === "tools" ? "tools" : "skills",
+    category: params.get("category") || "all",
+    view: params.get("view") || "all",
+    query: params.get("q") || "",
+    favorites: params.get("saved") === "1",
+  };
   if (
-    ["weekly", "growth", "rising", "new", "all"].includes(
-      params.get("view") || "",
-    )
+    !document.querySelector(`[data-category="${CSS.escape(state.category)}"]`)
   )
-    state.view = params.get("view")!;
-  $("#search").setAttribute("value", state.query);
+    state.category = "all";
+  if (![...select.options].some((o) => o.value === state.view))
+    state.view = "all";
+  search.value = state.query;
+  select.value = state.view;
   const notes: Record<string, string> = {
+    all: "周榜项目优先，其余按总 Star 排列。观察中表示本站尚未积累足够的 7 天数据。",
     weekly:
-      "来自 GitHub 官方周榜的 AI 项目，保留官方排名；官方本周增长与本站净增独立展示。",
-    growth:
-      "仅统计本站已跟踪、满足近期活跃与热度门槛的 AI 项目。使用真实观测点计算近 7 天净增。",
-    rising:
-      "完整连续观测 7 天，至少 5 天 Star 净增为正，并满足热榜门槛。趋势证据不代表未来保证。",
-    new: "按本站首次发现时间排序。新发现不等于新创建，也不等于已验证热门。",
-    all: "所有已确认与 AI 相关的收录项目。热度回落后仍可查阅，按总 Star 排序。",
+      "来源：GitHub Trending 周榜，保留官方顺序，仅展示当前目录收录的 AI 项目。",
+    growth: "仅本站已跟踪项目：按两次真实观测的 7 天净增排列，并通过热榜门槛。",
+    rising: "连续 7 个日间隔中至少 5 天增长，且满足热榜门槛；不代表未来走势。",
+    new: "按本站首次发现时间排列。这是新候选，不代表已经验证热门。",
+    stars: "按累计 Star 排列。长期累计不等于近期热度。",
   };
-  render = () => {
-    const words = state.query.trim().toLowerCase().split(/\s+/).filter(Boolean);
-    let shown = 0;
-    const order = [...cards].sort((a, b) =>
-      state.view === "weekly"
-        ? Number(a.dataset.weekly) - Number(b.dataset.weekly)
-        : state.view === "new"
-          ? (b.dataset.new || "").localeCompare(a.dataset.new || "")
-          : state.view === "growth" || state.view === "rising"
-            ? Number(b.dataset.delta) - Number(a.dataset.delta)
-            : Number(b.dataset.stars) - Number(a.dataset.stars),
+  function render() {
+    const tokens = state.query
+      .toLowerCase()
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean);
+    const sorted = [...cards].sort((a, b) =>
+      state.view === "new"
+        ? b.dataset.new!.localeCompare(a.dataset.new!)
+        : state.view === "growth" || state.view === "rising"
+          ? Number(b.dataset.delta) - Number(a.dataset.delta)
+          : state.view === "stars"
+            ? Number(b.dataset.stars) - Number(a.dataset.stars)
+            : (Number(a.dataset.weekly) || 999) -
+                (Number(b.dataset.weekly) || 999) ||
+              Number(b.dataset.stars) - Number(a.dataset.stars),
     );
-    for (const card of order) {
+    let count = 0;
+    for (const card of sorted) {
       const d = card.dataset;
-      const fits =
+      const visible =
+        d.family === state.family &&
         (state.category === "all" ||
-          d.categories?.split(",").includes(state.category)) &&
-        (state.form === "all" || d.forms?.split(",").includes(state.form)) &&
-        words.every((w) => d.search?.includes(w)) &&
+          d.categories!.split(" ").includes(state.category)) &&
         (!state.favorites || saved.has(d.id!)) &&
-        (state.view === "weekly"
-          ? Number(d.weekly) > 0
-          : state.view === "growth"
-            ? d.hot === "true"
-            : state.view === "rising"
-              ? d.rising === "true"
-              : true);
-      card.hidden = !fits;
-      if (fits) shown++;
-      const growth = card.querySelector("[data-growth]");
-      if (growth)
-        growth.textContent =
-          state.view === "weekly" && d.weeklyStars !== ""
-            ? `↗ ${Number(d.weeklyStars).toLocaleString("en-US")} / 官方本周`
-            : d.delta !== ""
-              ? `${Number(d.delta) >= 0 ? "+" : ""}${Number(d.delta).toLocaleString("en-US")} / 7天`
-              : "◌ 趋势观察中";
-      $("#cards").append(card);
+        tokens.every((t) => d.search!.includes(t)) &&
+        (state.view !== "weekly" || Number(d.weekly) > 0) &&
+        (state.view !== "growth" || d.hot === "true") &&
+        (state.view !== "rising" || d.rising === "true");
+      card.hidden = !visible;
+      if (visible) count++;
+      grid!.append(card);
     }
-    $("#result-count").textContent = `${shown} 个项目`;
-    $("#empty").hidden = shown > 0;
-    const cold =
-      (state.view === "growth" || state.view === "rising") &&
-      !window.__radar.observed;
-    $("#empty-title").textContent = cold
-      ? "增长需要时间，观察已经开始"
-      : state.favorites
-        ? "这里等待你的第一颗星"
-        : "暂时没有匹配的项目";
-    $("#empty-description").textContent = cold
-      ? "本站正在积累真实快照。满 7 天后，符合条件的项目会出现在这里；现在可以先看官方周榜。"
-      : state.favorites
-        ? "点击项目卡片上的 ☆ 收藏，记录保存在当前浏览器。"
-        : "试试其他关键词、用途或项目形态。";
-    $("#note-text").textContent =
-      notes[state.view] +
-      (state.view === "weekly"
-        ? ` 最近抓取：${window.__radar.weeklyAt ? new Date(window.__radar.weeklyAt).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai", hour12: false }) : "暂无"}。${window.__radar.weeklyError ? "本轮采集失败，展示上次结果。" : ""}`
-        : "");
-    if (
-      state.view === "weekly" &&
-      window.__radar.weeklyAt &&
-      Date.now() - Date.parse(window.__radar.weeklyAt) > 48 * 3600000
-    )
-      $("#note-text").textContent += " 周榜数据已过期。";
-    for (const [attr, value] of [
-      ["category", state.category],
-      ["form", state.form],
-      ["view", state.view],
-    ])
-      document
-        .querySelectorAll<HTMLButtonElement>(`button[data-${attr}]`)
-        .forEach((b) => {
-          const yes = b.dataset[attr] === value;
-          b.classList.toggle("active", yes);
-          b.setAttribute("aria-pressed", String(yes));
-        });
-    $("#favorites").setAttribute("aria-pressed", String(state.favorites));
-    $("#favorites").classList.toggle("active", state.favorites);
-    const p = new URLSearchParams();
-    if (state.query) p.set("q", state.query);
-    if (state.category !== "all") p.set("category", state.category);
-    if (state.form !== "all") p.set("form", state.form);
-    if (state.view !== "weekly") p.set("view", state.view);
-    history.replaceState(
-      null,
-      "",
-      location.pathname + (p.size ? "?" + p : "") + location.hash,
-    );
-  };
+    document.querySelector("#result-count")!.textContent = String(count);
+    document.querySelector("#family-label")!.textContent =
+      state.family === "skills" ? " Skills" : "个应用工具".replace("个", "");
+    document.querySelector("#filter-caption")!.textContent = state.favorites
+      ? "只看已收藏"
+      : select.selectedOptions[0].text;
+    document.querySelector("#view-note")!.textContent = notes[state.view];
+    document.querySelector<HTMLElement>("#empty-state")!.hidden = count > 0;
+    document.querySelector("#empty-note")!.textContent = [
+      "growth",
+      "rising",
+    ].includes(state.view)
+      ? "这个分类暂未积累足够的真实增长证据，可以先查看全部项目或官方周榜。"
+      : "换个关键词，或看看另一类工具。";
+    document
+      .querySelectorAll<HTMLButtonElement>("[data-family]")
+      .forEach((b) => {
+        if (!b.classList.contains("family-tab")) return;
+        const active = b.dataset.family === state.family;
+        b.classList.toggle("active", active);
+        b.setAttribute("aria-pressed", String(active));
+      });
+    document
+      .querySelectorAll<HTMLButtonElement>("[data-category]")
+      .forEach((b) => {
+        const active = b.dataset.category === state.category;
+        b.classList.toggle("active", active);
+        b.setAttribute("aria-pressed", String(active));
+      });
+    document
+      .querySelector("#favorites")!
+      .setAttribute("aria-pressed", String(state.favorites));
+    const url = new URL(location.href);
+    url.search = "";
+    if (state.family !== "skills") url.searchParams.set("family", state.family);
+    if (state.category !== "all")
+      url.searchParams.set("category", state.category);
+    if (state.view !== "all") url.searchParams.set("view", state.view);
+    if (state.query) url.searchParams.set("q", state.query);
+    if (state.favorites) url.searchParams.set("saved", "1");
+    history.replaceState(null, "", url);
+  }
+  renderDirectory = render;
+  document.querySelectorAll<HTMLButtonElement>(".family-tab").forEach((b) =>
+    b.addEventListener("click", () => {
+      state.family = b.dataset.family!;
+      render();
+    }),
+  );
   document.querySelectorAll<HTMLButtonElement>("[data-category]").forEach((b) =>
     b.addEventListener("click", () => {
       state.category = b.dataset.category!;
-      state.view = "all";
       render();
     }),
   );
-  document.querySelectorAll<HTMLButtonElement>("[data-form]").forEach((b) =>
-    b.addEventListener("click", () => {
-      state.form = b.dataset.form!;
-      render();
-    }),
-  );
-  document.querySelectorAll<HTMLButtonElement>("[data-view]").forEach((b) =>
-    b.addEventListener("click", () => {
-      state.view = b.dataset.view!;
-      render();
-    }),
-  );
-  $("#search").addEventListener("input", (e) => {
-    state.query = (e.target as HTMLInputElement).value;
-    if (state.query) state.view = "all";
+  search.addEventListener("input", () => {
+    state.query = search.value;
     render();
   });
-  $("#favorites").addEventListener("click", () => {
+  select.addEventListener("change", () => {
+    state.view = select.value;
+    render();
+  });
+  document.querySelector("#favorites")!.addEventListener("click", () => {
     state.favorites = !state.favorites;
-    state.view = "all";
-    state.category = "all";
-    state.form = "all";
     render();
   });
-  $("#reset").addEventListener("click", () => {
-    Object.assign(state, {
-      category: "all",
-      form: "all",
-      view: "weekly",
-      query: "",
-      favorites: false,
-    });
-    $<HTMLInputElement>("#search").value = "";
+  document.querySelector("#reset-filters")!.addEventListener("click", () => {
+    state.category = "all";
+    state.query = "";
+    state.view = "all";
+    state.favorites = false;
+    search.value = "";
+    select.value = "all";
     render();
   });
   document.addEventListener("keydown", (e) => {
     if (
       e.key === "/" &&
-      !(e.target instanceof HTMLInputElement) &&
-      !(e.target instanceof HTMLTextAreaElement)
+      !/input|textarea|select/i.test((e.target as HTMLElement).tagName)
     ) {
       e.preventDefault();
-      $("#search").focus();
+      search.focus();
     }
   });
+  const meta = (window as any).__radar;
+  const warnings = [];
   if (
-    window.__radar.lastUpdated &&
-    Date.now() - Date.parse(window.__radar.lastUpdated) > 48 * 3600000
+    !meta?.lastUpdated ||
+    Date.now() - Date.parse(meta.lastUpdated) > 48 * 3600000
   )
-    $("#stale-warning").hidden = false;
+    warnings.push("数据已超过 48 小时未更新，正在展示最近一次成功采集的记录。");
+  if (
+    meta?.weeklyError ||
+    !meta?.weeklyAt ||
+    Date.now() - Date.parse(meta.weeklyAt) > 48 * 3600000
+  )
+    warnings.push("官方周榜暂未更新，保留上次结果。");
+  if (warnings.length) {
+    const box = document.querySelector<HTMLElement>("#data-warning")!;
+    box.textContent = warnings.join(" ");
+    box.hidden = false;
+  }
   render();
 }
-export {};
+const tabs = [
+  ...document.querySelectorAll<HTMLButtonElement>("[data-readme-tab]"),
+];
+if (tabs.length) {
+  function switchReadme(language: string) {
+    if (!tabs.some((t) => t.dataset.readmeTab === language && !t.disabled))
+      return;
+    for (const tab of tabs) {
+      const active = tab.dataset.readmeTab === language;
+      tab.setAttribute("aria-selected", String(active));
+      tab.tabIndex = active ? 0 : -1;
+    }
+    document
+      .querySelectorAll<HTMLElement>("[data-readme-panel]")
+      .forEach((p) => (p.hidden = p.dataset.readmePanel !== language));
+    try {
+      localStorage.setItem("ai-trend-radar:readme-language", language);
+    } catch {}
+    const url = new URL(location.href);
+    url.searchParams.set("readme", language);
+    history.replaceState(null, "", url);
+  }
+  let preferred = new URLSearchParams(location.search).get("readme");
+  try {
+    preferred ||= localStorage.getItem("ai-trend-radar:readme-language");
+  } catch {}
+  if (preferred) switchReadme(preferred);
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => switchReadme(tab.dataset.readmeTab!));
+    tab.addEventListener("keydown", (e) => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)) return;
+      e.preventDefault();
+      const enabled = tabs.filter((t) => !t.disabled);
+      let next =
+        enabled[
+          (enabled.indexOf(tab) +
+            (e.key === "ArrowLeft" ? -1 : 1) +
+            enabled.length) %
+            enabled.length
+        ];
+      if (e.key === "Home") next = enabled[0];
+      if (e.key === "End") next = enabled.at(-1)!;
+      switchReadme(next.dataset.readmeTab!);
+      next.focus();
+    });
+  });
+}

@@ -3,9 +3,85 @@
     "aiRelated": false,
     "reason": "通用基础工具或非 AI 主体项目，首批精选不将间接出现的 AI 关键词视为核心用途。"
   },
+  "132464395": {
+    "forms": [
+      "resource"
+    ],
+    "categories": [
+      "coding"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "169975410": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "agents",
+      "office"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
   "180136168": {
     "aiRelated": false,
     "reason": "通用基础工具或非 AI 主体项目，首批精选不将间接出现的 AI 关键词视为核心用途。"
+  },
+  "193215554": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "office",
+      "agents"
+    ],
+    "summary": "可视化搭建自动化流程，连接 AI、业务系统与常用服务，支持自托管。",
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "218952803": {
+    "aiRelated": true,
+    "categories": [
+      "content",
+      "office"
+    ],
+    "forms": [
+      "app"
+    ],
+    "summary": "带有 AI 助手的微信 Markdown 编辑器，支持公众号排版、自定义主题、内容管理与多图床，适合整理和发布公众号文章。",
+    "tags": [
+      "公众号排版",
+      "Markdown",
+      "AI 助手"
+    ],
+    "reason": "依据 GitHub 仓库简介校订，明确具备 AI 助手及微信 Markdown 编辑能力。"
+  },
+  "250213286": {
+    "forms": [
+      "framework"
+    ],
+    "categories": [
+      "data"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "291438522": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "knowledge",
+      "office"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "349372179": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "office",
+      "data"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
   },
   "362500938": {
     "summary": "让 AI 工程师与领域专家协作构建高质量数据集的工具，适合组织数据反馈、整理和标注流程。",
@@ -29,6 +105,35 @@
     ],
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "498011141": {
+    "forms": [
+      "framework"
+    ],
+    "categories": [
+      "image",
+      "video"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "522158088": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "agents",
+      "office"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "570384908": {
+    "forms": [
+      "framework"
+    ],
+    "categories": [
+      "models"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
   },
   "589831718": {
     "summary": "基于节点与工作流的生成式 AI 界面及后端，可组合扩散模型和处理步骤，搭建图像等内容生成流程。",
@@ -56,6 +161,27 @@
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
   },
+  "625710399": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "agents",
+      "office"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "626805178": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "agents",
+      "knowledge"
+    ],
+    "summary": "用可视化工作流搭建 AI 应用、知识库问答与智能助手，支持自托管。",
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
   "638951438": {
     "summary": "用于调试、评测和监控 LLM 应用的平台，提供调用追踪、自动评测与 Agent 工作流观测能力。",
     "categories": [
@@ -82,6 +208,26 @@
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
   },
+  "642608852": {
+    "forms": [
+      "model"
+    ],
+    "categories": [
+      "models"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "701547123": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "agents",
+      "knowledge"
+    ],
+    "summary": "可自托管的 AI 对话界面，连接本地或远程模型，管理聊天与知识库。",
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
   "725205304": {
     "summary": "用于本地运行和训练语言模型、扩散模型的工具与界面，覆盖多种模型格式和微调工作流。",
     "categories": [
@@ -94,6 +240,15 @@
     ],
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "770153867": {
+    "forms": [
+      "skill"
+    ],
+    "categories": [
+      "video"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
   },
   "818331198": {
     "summary": "面向 Python 的类型化 AI 应用框架，覆盖 Agent、实时语音、图像生成和嵌入等模型接口。",
@@ -132,6 +287,53 @@
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
   },
+  "853189791": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "office"
+    ],
+    "summary": "使用 AI 翻译 PDF 文档，尽量保留原文档排版，便于双语阅读。",
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "910176789": {
+    "forms": [
+      "model"
+    ],
+    "categories": [
+      "models",
+      "video"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "920995232": {
+    "forms": [
+      "model"
+    ],
+    "categories": [
+      "audio"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "928102730": {
+    "forms": [
+      "model"
+    ],
+    "categories": [
+      "audio"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "943398999": {
+    "forms": [
+      "resource"
+    ],
+    "categories": [
+      "coding"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
   "944080744": {
     "summary": "面向 AI Agent 的企业知识上下文平台，将多个办公与开发系统中的内容整理为可搜索、可引用的工作空间。",
     "categories": [
@@ -158,6 +360,26 @@
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
   },
+  "968197216": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "coding"
+    ],
+    "summary": "Google 的终端 AI 编程助手，用自然语言理解代码、修改项目并执行开发任务。",
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "974186260": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "content",
+      "knowledge"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
   "975734319": {
     "summary": "开源 AI 编程 Agent，帮助开发者通过自然语言开展代码修改与软件开发任务。",
     "categories": [
@@ -169,6 +391,15 @@
     ],
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "976921297": {
+    "forms": [
+      "resource"
+    ],
+    "categories": [
+      "coding"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
   },
   "995029641": {
     "summary": "用于协调多个 AI Agent 的运行框架，提供工作流编排、记忆与检索集成，可连接多种编程助手。",
@@ -183,6 +414,15 @@
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
   },
+  "1008713177": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "coding"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
   "1016509116": {
     "summary": "跨平台 AI 短视频制作工具，面向产品营销和内容创作，支持批量生成与自动剪辑。",
     "categories": [
@@ -194,6 +434,34 @@
     ],
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1024118326": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "knowledge"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "1031912724": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "coding"
+    ],
+    "summary": "集中管理 Claude Code、Codex 等编程助手的服务商配置与相关工具设置。",
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "1052050442": {
+    "forms": [
+      "resource"
+    ],
+    "categories": [
+      "agents"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
   },
   "1057664813": {
     "summary": "多语言语音生成模型，支持文本转语音、声音设计与声音克隆，适合构建语音合成应用。",
@@ -234,6 +502,42 @@
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
   },
+  "1113573066": {
+    "forms": [
+      "skill"
+    ],
+    "categories": [
+      "office",
+      "image"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "1136666433": {
+    "forms": [
+      "skill"
+    ],
+    "categories": [
+      "content"
+    ],
+    "summary": "用于修改 AI 写作痕迹的文本编辑 Skill，帮助检查常见措辞、结构和表达问题。",
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "1137388347": {
+    "aiRelated": true,
+    "categories": [
+      "video"
+    ],
+    "forms": [
+      "skill"
+    ],
+    "tags": [
+      "视频 Skill",
+      "Remotion",
+      "React"
+    ],
+    "summary": "Remotion 官方视频创作 Skills，让 AI 编程助手按最佳实践制作 React 动画、字幕与程序化视频。",
+    "reason": "核对仓库 README、技能目录及实际 SKILL.md；作为视频 Skill 推荐入口，推荐不等于热榜排名。"
+  },
   "1140229822": {
     "summary": "Cursor 插件规范与官方插件集合，为扩展编辑器中的 Agent 能力提供参考实现和可安装内容。",
     "categories": [
@@ -259,6 +563,25 @@
     ],
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1142684322": {
+    "forms": [
+      "framework"
+    ],
+    "categories": [
+      "models"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "1145022970": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "video",
+      "image"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
   },
   "1156137396": {
     "summary": "桌面 AI Agent，可执行数据分析、幻灯片、文档和视频等任务，并支持从微信、飞书等渠道发送指令。",
@@ -320,6 +643,16 @@
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
   },
+  "1170821064": {
+    "forms": [
+      "app"
+    ],
+    "categories": [
+      "agents",
+      "office"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
   "1172273835": {
     "summary": "面向 Claude Skills 的安全研究技能库，以结构化 SKILL.md 组织不同攻击面的审查方法与专业上下文。",
     "categories": [
@@ -332,6 +665,15 @@
     ],
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1174224707": {
+    "forms": [
+      "skill"
+    ],
+    "categories": [
+      "content"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
   },
   "1174289380": {
     "summary": "AI 短剧制作工作台，从剧本输入到分镜、角色一致性管理、镜头准备、视频生成与导出。",
@@ -360,17 +702,20 @@
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
   },
   "1177402105": {
-    "summary": "面向 AI Agent 的 HTML 视频制作工具，通过编写网页式画面与动画来渲染视频，适合程序化视频创作。",
+    "aiRelated": true,
     "categories": [
-      "video",
-      "coding"
+      "video"
     ],
     "forms": [
-      "framework",
       "skill"
     ],
-    "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+    "tags": [
+      "视频 Skill",
+      "HTML 视频",
+      "Agent"
+    ],
+    "summary": "用 HTML、CSS 和 JavaScript 创建视频的开源工具，提供 Agent Skills，支持预览、时间线和视频渲染。",
+    "reason": "核对仓库 README、技能目录及实际 SKILL.md；作为视频 Skill 推荐入口，推荐不等于热榜排名。"
   },
   "1183263320": {
     "summary": "Android 官方面向 AI Agent 的模块化开发技能，使用 SKILL.md 和配套资源传递 Android 开发实践与工作流。",
@@ -396,6 +741,17 @@
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
   },
+  "1191791121": {
+    "forms": [
+      "skill"
+    ],
+    "categories": [
+      "video",
+      "audio",
+      "image"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
   "1193300953": {
     "summary": "从剧本到成片的 AIGC 视频制作引擎，可用于短剧、广告、电商产品视频等创作流程。",
     "categories": [
@@ -407,6 +763,15 @@
     ],
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+  },
+  "1195360525": {
+    "forms": [
+      "skill"
+    ],
+    "categories": [
+      "video"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
   },
   "1197569406": {
     "summary": "本地优先的编程 Agent 桌面工作台，整合多助手协作、Git Worktree、代码差异与技能管理，支持远程访问。",
@@ -444,6 +809,17 @@
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
   },
+  "1216954187": {
+    "forms": [
+      "skill"
+    ],
+    "categories": [
+      "video",
+      "image",
+      "content"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
   "1217942969": {
     "summary": "图像生成与编辑的 Agent Skill 和命令行工具，附带提示词图库，方便探索和复用图片创作方式。",
     "categories": [
@@ -458,14 +834,13 @@
   "1218208502": {
     "summary": "面向中文网文创作的 Agent Skills，覆盖选题分析、拆文、写作、润色和封面，并通过文件跟踪长篇连贯性。",
     "categories": [
-      "content",
-      "image"
+      "content"
     ],
     "forms": [
       "skill"
     ],
     "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
   },
   "1223939135": {
     "summary": "可自托管的 AI 销售与客户管理系统，结合原生 Agent 和 WhatsApp 等渠道处理销售对话与业务流程。",
@@ -508,19 +883,42 @@
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
   },
+  "1291783779": {
+    "forms": [
+      "skill"
+    ],
+    "categories": [
+      "content"
+    ],
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
   "1302986554": {
     "summary": "面向 Claude Code 和 Codex 的 AI 短剧技能合集，覆盖剧本、角色资产、分镜、图像与视频提示词和审查。",
     "categories": [
       "video",
-      "image",
       "content"
     ],
     "forms": [
-      "skill",
-      "resource"
+      "skill"
     ],
     "aiRelated": true,
-    "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+    "reason": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
+  },
+  "1305663861": {
+    "aiRelated": true,
+    "categories": [
+      "video"
+    ],
+    "forms": [
+      "skill"
+    ],
+    "tags": [
+      "视频 Skill",
+      "产品演示",
+      "镜头编排"
+    ],
+    "summary": "给 AI 助手的视频制作 Skill：把网页、截图和素材编排成带镜头运动、配音与音效的产品演示片。",
+    "reason": "核对仓库 README、技能目录及实际 SKILL.md；作为视频 Skill 推荐入口，推荐不等于热榜排名。"
   },
   "1332781509": {
     "summary": "可自选模型和沙箱环境的开源 AI 助手，提供类似 Grok Bot 的任务执行工作方式。",
@@ -556,22 +954,5 @@
     ],
     "aiRelated": true,
     "reason": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-  },
-  "218952803": {
-    "aiRelated": true,
-    "categories": [
-      "content",
-      "office"
-    ],
-    "forms": [
-      "app"
-    ],
-    "summary": "带有 AI 助手的微信 Markdown 编辑器，支持公众号排版、自定义主题、内容管理与多图床，适合整理和发布公众号文章。",
-    "tags": [
-      "公众号排版",
-      "Markdown",
-      "AI 助手"
-    ],
-    "reason": "依据 GitHub 仓库简介校订，明确具备 AI 助手及微信 Markdown 编辑能力。"
   }
 }

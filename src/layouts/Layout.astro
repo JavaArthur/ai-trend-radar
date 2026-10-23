@@ -1,14 +1,60 @@
 ---
-import '../styles/global.css';
-const {title='AI 热榜雷达 · 发现正在升起的开源项目',description='按用途发现 AI 开源项目。追踪 GitHub 热门、真实 Star 增长与项目维护状态。'}=Astro.props;
-const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+import "../styles/global.css";
+const {
+  title = "AI 热榜雷达 · 好想法，配上好工具",
+  description = "发现值得一试的 AI Skills 和开源应用：视频、图片、编程与创作工具，真实 GitHub 热度与中英文 README。",
+} = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
+
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content={description}/><meta name="theme-color" content="#f5f5ef"/><link rel="icon" href={`${base}/favicon.svg`}/><title>{title}</title></head>
-<body>
-<a class="skip" href="#main">跳到内容</a>
-<header class="topbar"><a class="brand" href={`${base}/`} aria-label="AI 热榜雷达首页"><span class="radar-logo"><i></i></span><span>AI 热榜雷达<small>THE OPEN SOURCE SIGNAL</small></span></a><nav><a href={`${base}/`}>发现项目</a><a href={`${base}/about/`}>数据说明 <span>↗</span></a><a class="github-link" href="https://github.com/JavaArthur/ai-trend-radar" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a></nav></header>
-<slot/>
-<footer class="footer"><a class="footer-brand" href={`${base}/`}>◉ AI 热榜雷达</a><p>用数据发现热度，用好奇心探索开源。</p><span>独立收录站 · 非 GitHub 官方产品</span><a href={`${base}/about/`}>数据与收录说明 ↗</a></footer>
-</body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f5f7fc" />
+    <link rel="icon" href={`${base}/favicon.svg`} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      跳到内容
+    </a>
+    <header class="topbar shell">
+      <a class="brand" href={`${base}/`} aria-label="AI 热榜雷达首页">
+        <span class="brand-mark" aria-hidden="true">
+          ↗
+        </span>
+        <span>
+          AI 热榜雷达<small>给好奇心，找个好工具</small>
+        </span>
+      </a>
+      <nav aria-label="主导航">
+        <a href={`${base}/#explore`}>发现工具</a>
+        <a href={`${base}/about/`}>收录说明</a>
+        <a
+          class="github-link"
+          href="https://github.com/JavaArthur/ai-trend-radar"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub ↗
+        </a>
+      </nav>
+    </header>
+    <slot />
+    <footer class="footer shell">
+      <div>
+        <a class="footer-brand" href={`${base}/`}>
+          ↗ AI 热榜雷达
+        </a>
+        <p>把开源的可能，变成你的下一件作品。</p>
+      </div>
+      <div>
+        <span>独立收录 · 每日观测 · 保持好奇</span>
+        <a href={`${base}/about/`}>数据与收录说明 ↗</a>
+      </div>
+    </footer>
+  </body>
+</html>

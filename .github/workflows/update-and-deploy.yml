@@ -48,7 +48,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/catalog.json data/ai-usage.json
+          git add data/
           if ! git diff --cached --quiet; then
             git commit -m 'data: refresh observed AI projects'
             git push

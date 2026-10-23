@@ -31,3 +31,18 @@ for (const file of files) {
 console.log(
   `Checked ${files.length} HTML pages and ${checked} local asset/page links; no credential patterns found.`,
 );
+
+// The source cache is committed too; scan it as well as the published HTML.
+const { redactReadme } = await import("../src/lib/redact");
+for (const file of (await readdir("data/readmes")).filter((p) =>
+  p.endsWith(".json"),
+)) {
+  const bundle = JSON.parse(await readFile(join("data/readmes", file), "utf8"));
+  for (const source of bundle.files)
+    assert.equal(
+      redactReadme(source.markdown).redactions,
+      0,
+      `Credential pattern in README cache ${file}`,
+    );
+}
+console.log("README source caches passed credential-pattern checks.");

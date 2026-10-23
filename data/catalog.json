@@ -941,94 +941,6 @@
       ]
     },
     {
-      "id": 1177402105,
-      "fullName": "heygen-com/hyperframes",
-      "slug": "heygen-com-hyperframes-1177402105",
-      "url": "https://github.com/heygen-com/hyperframes",
-      "description": "Write HTML. Render video. Built for agents.",
-      "homepage": "https://hyperframes.dev",
-      "stars": 70542,
-      "forks": 6387,
-      "language": "TypeScript",
-      "topics": [
-        "ai",
-        "ai-agents",
-        "animation",
-        "claude-code",
-        "ffmpeg",
-        "framework",
-        "gsap",
-        "html",
-        "html-to-video",
-        "mcp",
-        "motion-graphics",
-        "puppeteer",
-        "rendering",
-        "typescript",
-        "video-editor"
-      ],
-      "license": "Apache-2.0",
-      "archived": false,
-      "unavailable": false,
-      "pushedAt": "2026-10-23T16:06:48Z",
-      "createdAt": "2026-03-10T01:51:06Z",
-      "firstSeenAt": "2026-10-23T15:42:26.459Z",
-      "fetchedAt": "2026-10-23T16:07:36.633Z",
-      "defaultBranch": "main",
-      "readmeCheckedAt": "2026-10-23T16:07:36.633Z",
-      "sources": [
-        "trending"
-      ],
-      "skillEvidence": true,
-      "classification": {
-        "aiRelated": true,
-        "categories": [
-          "video",
-          "coding"
-        ],
-        "forms": [
-          "framework",
-          "skill"
-        ],
-        "tags": [
-          "ai",
-          "ai-agents",
-          "animation",
-          "claude-code",
-          "ffmpeg",
-          "framework"
-        ],
-        "summary": "面向 AI Agent 的 HTML 视频制作工具，通过编写网页式画面与动画来渲染视频，适合程序化视频创作。",
-        "status": "manual",
-        "evidence": [
-          {
-            "source": "description",
-            "text": "Write HTML. Render video. Built for agents."
-          },
-          {
-            "source": "topics",
-            "text": "ai, ai-agents, animation, claude-code, ffmpeg, framework, gsap, html, html-to-video, mcp, motion-graphics, puppeteer"
-          },
-          {
-            "source": "readme",
-            "text": "已核实实际技能文件：.agents/skills/captions-overlay/SKILL.md、.agents/skills/changelog-video/SKILL.md、.agents/skills/cut-the-curve/SKILL.md"
-          },
-          {
-            "source": "manual",
-            "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
-          }
-        ],
-        "readmeHash": "f90b77b82976fe69d697c12f32b1a31ca6651d0342708248f933bf4280034b89",
-        "processedAt": "2026-10-23T15:50:02.429Z"
-      },
-      "snapshots": [
-        {
-          "at": "2026-10-23T16:07:36.633Z",
-          "stars": 70542
-        }
-      ]
-    },
-    {
       "id": 1079456184,
       "fullName": "K-Dense-AI/scientific-agent-skills",
       "slug": "k-dense-ai-scientific-agent-skills-1079456184",
@@ -4352,20 +4264,22 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "models",
-          "office",
-          "image"
+          "models"
         ],
         "forms": [
-          "app"
+          "framework"
         ],
         "tags": [],
         "summary": "Convert ONNX models into native, backend-agnostic Burn code for inference and fine-tuning.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
             "text": "Convert ONNX models into native, backend-agnostic Burn code for inference and fine-tuning."
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "c2f9b60112871023a5feba5bc49744ab8a548b9039525522b9ded170d1bfdf3c",
@@ -4707,13 +4621,11 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "agents",
-          "coding",
-          "office"
+          "office",
+          "data"
         ],
         "forms": [
-          "skill",
-          "mcp"
+          "app"
         ],
         "tags": [
           "business-intelligence",
@@ -4722,7 +4634,7 @@
           "dbt"
         ],
         "summary": "Agentic BI. Analytics at the speed of code ⚡️",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -4735,6 +4647,10 @@
           {
             "source": "readme",
             "text": "已核实仓库中的 SKILL.md 文件或明确的技能安装命令"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "79eae62898d4cd86057a503aee3dd2eea38023ab5c1317973f47c488912b6205",
@@ -5187,12 +5103,10 @@
         "aiRelated": true,
         "categories": [
           "office",
-          "agents",
-          "image"
+          "agents"
         ],
         "forms": [
-          "mcp",
-          "framework"
+          "app"
         ],
         "tags": [
           "ai",
@@ -5202,8 +5116,8 @@
           "data-flow",
           "development"
         ],
-        "summary": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-        "status": "rules",
+        "summary": "可视化搭建自动化流程，连接 AI、业务系统与常用服务，支持自托管。",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -5212,6 +5126,10 @@
           {
             "source": "topics",
             "text": "ai, apis, automation, cli, data-flow, development, integration-framework, integrations, ipaas, low-code, low-code-platform, mcp"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "1b2642bc182969047627fc3568c785bad291fb9a2c7d655b19813608bf69ce27",
@@ -5822,12 +5740,10 @@
         "aiRelated": true,
         "categories": [
           "agents",
-          "office",
-          "models"
+          "knowledge"
         ],
         "forms": [
-          "mcp",
-          "framework"
+          "app"
         ],
         "tags": [
           "agent",
@@ -5837,8 +5753,8 @@
           "ai",
           "automation"
         ],
-        "summary": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-        "status": "rules",
+        "summary": "用可视化工作流搭建 AI 应用、知识库问答与智能助手，支持自托管。",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -5847,6 +5763,10 @@
           {
             "source": "topics",
             "text": "agent, agentic-ai, agentic-framework, agentic-workflow, ai, automation, claude, deepseek, genai, gpt, llm, low-code"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "3c7fe487f1e89e6faec52f5421c71e749c1cecc3486725be3e03fb3fbb62e484",
@@ -5900,12 +5820,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "agents",
-          "knowledge",
-          "image"
+          "coding"
         ],
         "forms": [
-          "mcp"
+          "resource"
         ],
         "tags": [
           "agent",
@@ -5916,7 +5834,7 @@
           "java"
         ],
         "summary": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -5925,6 +5843,10 @@
           {
             "source": "topics",
             "text": "agent, ai, context-engineering, deepseek, interview, java, mcp, mysql, redis, redisson, skills, springai"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "b57846f9955a275ad42d5e96c1e1808c51fa01abe94d422418b887c827dd043f",
@@ -5981,12 +5903,11 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "knowledge",
           "agents",
-          "models"
+          "knowledge"
         ],
         "forms": [
-          "mcp"
+          "app"
         ],
         "tags": [
           "ai",
@@ -5996,8 +5917,8 @@
           "llms",
           "mcp"
         ],
-        "summary": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
-        "status": "rules",
+        "summary": "可自托管的 AI 对话界面，连接本地或远程模型，管理聊天与知识库。",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -6006,6 +5927,10 @@
           {
             "source": "topics",
             "text": "ai, llm, llm-ui, llm-webui, llms, mcp, ollama, ollama-webui, open-webui, openai, openapi, rag"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "da3d46f4d7e6c158e13ed91e5e46250d22d278b972d8d1b028f5e0bb62be612b",
@@ -6206,12 +6131,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "coding",
-          "agents",
-          "knowledge"
+          "coding"
         ],
         "forms": [
-          "mcp"
+          "app"
         ],
         "tags": [
           "ai-tools",
@@ -6221,8 +6144,8 @@
           "grok",
           "grokbuild"
         ],
-        "summary": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
-        "status": "rules",
+        "summary": "集中管理 Claude Code、Codex 等编程助手的服务商配置与相关工具设置。",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -6231,6 +6154,10 @@
           {
             "source": "topics",
             "text": "ai-tools, claude-code, codex, desktop-app, grok, grokbuild, hermes, hermes-agent, mcp, open-source, openclaw, openclaw-ui"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "121554e6f8c42c8349aaa6abb032e8d42cf2157cc47d684c6f12e100c49f25f7",
@@ -6291,11 +6218,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "coding",
-          "agents"
+          "coding"
         ],
         "forms": [
-          "app"
+          "resource"
         ],
         "tags": [
           "ai",
@@ -6306,7 +6232,7 @@
           "cursorai"
         ],
         "summary": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -6315,6 +6241,10 @@
           {
             "source": "topics",
             "text": "ai, bolt, cluely, copilot, cursor, cursorai, devin, github-copilot, lovable, open-source, perplexity, replit"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "13bd1e88a01de77b6681c55f1d8cd71d9facb0c4906c92e254c7db98f7f31dfe",
@@ -6441,8 +6371,6 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "office",
-          "models",
           "video"
         ],
         "forms": [
@@ -6457,7 +6385,7 @@
           "python"
         ],
         "summary": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -6470,6 +6398,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：docs/skill/SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "80f3338c092ebee3b2bc7a4b8b2d9e306e20ea47d90d6cd4126c68ad16fc4aac",
@@ -6818,12 +6750,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "agents",
-          "coding",
-          "office"
+          "coding"
         ],
         "forms": [
-          "mcp"
+          "app"
         ],
         "tags": [
           "ai",
@@ -6833,8 +6763,8 @@
           "gemini-api",
           "mcp-client"
         ],
-        "summary": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-        "status": "rules",
+        "summary": "Google 的终端 AI 编程助手，用自然语言理解代码、修改项目并执行开发任务。",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -6843,6 +6773,10 @@
           {
             "source": "topics",
             "text": "ai, ai-agents, cli, gemini, gemini-api, mcp-client, mcp-server"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "7235196f55461732c246c20ce9996cc56ba2e52641f183ccf4e6493bd93c1c94",
@@ -6904,11 +6838,10 @@
         "aiRelated": true,
         "categories": [
           "agents",
-          "office",
-          "coding"
+          "office"
         ],
         "forms": [
-          "mcp"
+          "app"
         ],
         "tags": [
           "acpx",
@@ -6919,7 +6852,7 @@
           "ai-engineering"
         ],
         "summary": "The open-source app everyone uses to manage agents at work",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -6928,6 +6861,10 @@
           {
             "source": "topics",
             "text": "acpx, agent-orchestration, agent-skills, agentic-ai, ai-agents, ai-engineering, ai-governance, ai-tools, autonomous-agents, claude, claude-code, claude-skills"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "b7c58fc6fe8a5900502c6166950f53fc3e1ff979a0d279cff23d48de9b569d7c",
@@ -7542,13 +7479,9 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "agents",
-          "models",
-          "knowledge"
+          "agents"
         ],
         "forms": [
-          "skill",
-          "mcp",
           "resource"
         ],
         "tags": [
@@ -7558,7 +7491,7 @@
           "tutorial"
         ],
         "summary": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -7571,6 +7504,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：Co-creation-projects/jphJack-PaperMindAgent/staged-skills/paper-innovation-designer/SKILL.md、Co-creation-projects/lcyting-StockSage-agent/skills/巴菲特投资思维/skills/buffett/SKILL.md、Co-creation-projects/lcyting-StockSage-agent/skills/智能选股/mx-xuangu/SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "086d22ae09204565b271e9fb5f68b3ca9ce72de9bda46f0a50539e1248a32223",
@@ -7891,9 +7828,7 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "image",
-          "video",
-          "coding"
+          "video"
         ],
         "forms": [
           "skill"
@@ -7907,7 +7842,7 @@
           "cursor"
         ],
         "summary": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -7920,6 +7855,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：.agents/skills/3d-asset-generation/SKILL.md、.agents/skills/acestep/SKILL.md、.agents/skills/agents/SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "d10e96ce97d87a2519cda2c51261f8dac3daf0b7272cde574c2861ab8d40ab38",
@@ -7980,12 +7919,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "coding",
-          "image",
-          "models"
+          "coding"
         ],
         "forms": [
-          "skill"
+          "resource"
         ],
         "tags": [
           "ai",
@@ -7996,7 +7933,7 @@
           "chatgpt"
         ],
         "summary": "Documented system prompts from Anthropic - Claude Fable 5.1, Opus 5.5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -8009,6 +7946,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：Anthropic/artifact-types/dashboard/SKILL.md、Anthropic/artifact-types/design-system/SKILL.md、Anthropic/artifact-types/design/SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "b9655e001bee7ae386d5982edbe6813e64726af4d60997fe3d9fe1a7b459a3da",
@@ -8140,8 +8081,7 @@
         "aiRelated": true,
         "categories": [
           "office",
-          "audio",
-          "agents"
+          "image"
         ],
         "forms": [
           "skill"
@@ -8155,7 +8095,7 @@
           "ppt"
         ],
         "summary": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -8168,6 +8108,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：skills/ppt-master/SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "c98d33b920c6cd7d0c13eee7c94d9cd883458c605f48291cc2acfa54be975187",
@@ -8296,11 +8240,10 @@
         "aiRelated": true,
         "categories": [
           "content",
-          "agents",
-          "models"
+          "knowledge"
         ],
         "forms": [
-          "mcp"
+          "app"
         ],
         "tags": [
           "ai",
@@ -8311,7 +8254,7 @@
           "llm"
         ],
         "summary": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -8320,6 +8263,10 @@
           {
             "source": "topics",
             "text": "ai, bark, data-analysis, docker, hot-news, llm, mail, mcp, mcp-server, news, ntfy, python"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "a3b3e867efadb4c6a4da5a25e06b33c1fabfaba4d8907fe47d0ba768d31fba08",
@@ -8373,9 +8320,7 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "coding",
-          "models",
-          "agents"
+          "content"
         ],
         "forms": [
           "skill"
@@ -8388,8 +8333,8 @@
           "claude",
           "claude-code"
         ],
-        "summary": "Agent skill that removes signs of AI-generated writing from text",
-        "status": "rules",
+        "summary": "用于修改 AI 写作痕迹的文本编辑 Skill，帮助检查常见措辞、结构和表达问题。",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -8402,6 +8347,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "500b53c0d29cd3219d160b5f9a109c0969f706aec74b49a4a081d2026ba48ec7",
@@ -8868,11 +8817,10 @@
         "aiRelated": true,
         "categories": [
           "agents",
-          "knowledge",
-          "models"
+          "office"
         ],
         "forms": [
-          "mcp"
+          "app"
         ],
         "tags": [
           "ai",
@@ -8883,7 +8831,7 @@
           "claude-code"
         ],
         "summary": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -8892,6 +8840,10 @@
           {
             "source": "topics",
             "text": "ai, ai-agent, ai-agents, chatgpt-on-wechat, claude, claude-code, codex, cowagent, deepseek, harness, llm, mcp"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "86bc5c8921b5c173c99985d603bf5d8a06250e299cddebe445948f8ff2dae393",
@@ -9019,12 +8971,11 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "agents",
           "knowledge",
           "office"
         ],
         "forms": [
-          "mcp"
+          "app"
         ],
         "tags": [
           "agentic-ai",
@@ -9035,7 +8986,7 @@
           "mcp"
         ],
         "summary": "An open-source, privacy-first, self-hosted knowledge workspace where humans and AI agents work together 开源、隐私优先、自托管的知识工作空间，让人与智能体在此协作",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -9044,6 +8995,10 @@
           {
             "source": "topics",
             "text": "agentic-ai, ai-agent, knowledge-base, local-first, markdown, mcp, note-taking, self-hosted, siyuan, workspace"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "2e8149ff44c748a100517401455618b6569858eec3d8c6a24ffe96f5da2721cd",
@@ -9500,12 +9455,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "office",
-          "content",
-          "agents"
+          "office"
         ],
         "forms": [
-          "mcp"
+          "app"
         ],
         "tags": [
           "chinese",
@@ -9515,8 +9468,8 @@
           "japanese",
           "korean"
         ],
-        "summary": "[EMNLP 2025 Demo] PDF scientific paper translation with preserved formats - 基于 AI 完整保留排版的 PDF 文档全文双语翻译，支持 Google/DeepL/Ollama/OpenAI 等服务，提供 CLI/GUI/MCP/Docker/Zotero",
-        "status": "rules",
+        "summary": "使用 AI 翻译 PDF 文档，尽量保留原文档排版，便于双语阅读。",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -9525,6 +9478,10 @@
           {
             "source": "topics",
             "text": "chinese, document, edit, english, japanese, korean, latex, math, mcp, modify, obsidian, openai"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "a59fc6c0e5860a4b5713d79e3babce036d90df2dddc06eef91c548c278e652fb",
@@ -9919,12 +9876,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "knowledge",
-          "agents",
-          "models"
+          "knowledge"
         ],
         "forms": [
-          "mcp"
+          "app"
         ],
         "tags": [
           "agent",
@@ -9935,7 +9890,7 @@
           "embeddings"
         ],
         "summary": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -9944,6 +9899,10 @@
           {
             "source": "topics",
             "text": "agent, agentic, ai, chatbot, dsh-plugin, embeddings, evaluation, generative-ai, golang, knowledge-base, llm, multi-tenant"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "5c78549c424a1e0264a9e88a02706e844c9548fbd6bef59b2dd981e31b0621c4",
@@ -10053,11 +10012,10 @@
         "aiRelated": true,
         "categories": [
           "image",
-          "video",
-          "audio"
+          "video"
         ],
         "forms": [
-          "app"
+          "framework"
         ],
         "tags": [
           "deep-learning",
@@ -10068,7 +10026,7 @@
           "image2video"
         ],
         "summary": "🤗 Diffusers: State-of-the-art diffusion models for image, video, and audio generation in PyTorch.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -10077,6 +10035,10 @@
           {
             "source": "topics",
             "text": "deep-learning, diffusion, flux, image-generation, image2image, image2video, latent-diffusion-models, pytorch, qwen-image, score-based-generative-modeling, stable-diffusion, stable-diffusion-diffusers"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "7983ae4d23ec43664c587027d7462ba8a742ddff784430dfb7fd3cea8ba5523c",
@@ -10599,13 +10561,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "agents",
-          "coding",
-          "models"
+          "coding"
         ],
         "forms": [
-          "skill",
-          "mcp"
+          "app"
         ],
         "tags": [
           "agentic",
@@ -10616,7 +10575,7 @@
           "coding-agent"
         ],
         "summary": "An open-source AI coding agent that lives in your terminal.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -10629,6 +10588,10 @@
           {
             "source": "readme",
             "text": "已核实仓库中的 SKILL.md 文件或明确的技能安装命令"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "4a0ebab59ff1b820bcc4456fa8c44e1c8593d7fef26a6183c7c18aa36c6b1966",
@@ -11089,12 +11052,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "audio",
-          "models",
-          "data"
+          "audio"
         ],
         "forms": [
-          "app"
+          "model"
         ],
         "tags": [
           "bigvgan",
@@ -11105,7 +11066,7 @@
           "voice-clone"
         ],
         "summary": "An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -11114,6 +11075,10 @@
           {
             "source": "topics",
             "text": "bigvgan, cross-lingual, indextts, text-to-speech, tts, voice-clone, zero-shot-tts"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "70a238e697b1c59fa98b56c2275d70c5dd8aa7dc9bcf7c9cea649206ab7843ce",
@@ -11321,12 +11286,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "models",
-          "audio",
           "data"
         ],
         "forms": [
-          "app"
+          "framework"
         ],
         "tags": [
           "ai",
@@ -11337,7 +11300,7 @@
           "deep-learning"
         ],
         "summary": "🤗 The largest hub of ready-to-use datasets for AI models with fast, easy-to-use and efficient data manipulation tools",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -11346,6 +11309,10 @@
           {
             "source": "topics",
             "text": "ai, artificial-intelligence, computer-vision, dataset-hub, datasets, deep-learning, huggingface, llm, machine-learning, natural-language-processing, nlp, numpy"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "b44ee0cc106481037c92a7a3e045ee12c288c6f9963329081ff6e6744e39f344",
@@ -11478,12 +11445,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "models",
-          "image",
-          "audio"
+          "models"
         ],
         "forms": [
-          "app"
+          "framework"
         ],
         "tags": [
           "adapter",
@@ -11494,7 +11459,7 @@
           "parameter-efficient-learning"
         ],
         "summary": "🤗 PEFT: State-of-the-art Parameter-Efficient Fine-Tuning.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -11503,6 +11468,10 @@
           {
             "source": "topics",
             "text": "adapter, diffusion, fine-tuning, llm, lora, parameter-efficient-learning, peft, python, pytorch, transformers"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "65958fdf047de668cb2abd1c34dace3082d46680b98ae781b8bd2db38486e13e",
@@ -11931,11 +11900,10 @@
         "aiRelated": true,
         "categories": [
           "video",
-          "image",
-          "office"
+          "image"
         ],
         "forms": [
-          "mcp"
+          "app"
         ],
         "tags": [
           "ai-agents",
@@ -11946,7 +11914,7 @@
           "generative-ai"
         ],
         "summary": "短剧、漫剧制作工具 Toonflow：开源 AI 视频创作平台，集成剧本创作、智能分镜、角色与场景资产管理、图像生成和视频生成。融合无限画布、AI Agent 与可视化工作流，支持本地部署、自选模型、跨平台客户端、MCP 与插件扩展。Open-source AI short drama and motion comic creation tool with an infinite canvas, AI agents, storyboarding, image and video generation. Self-hosted and extensible, with a canvas-based approach similar to LibTV and TapNow.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -11955,6 +11923,10 @@
           {
             "source": "topics",
             "text": "ai-agents, ai-comic, ai-content-creation, ai-filmmaking, ai-short-drama, generative-ai, image-generation, image-to-video, infinite-canvas, libtv, motion-comics, node-based-editor"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "8c38c9bb6e51adb96de6ac26f36d60e1179aba95dd2667f4b2f83eaf9eb88473",
@@ -12168,12 +12140,11 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "audio",
-          "office",
-          "agents"
+          "agents",
+          "office"
         ],
         "forms": [
-          "skill"
+          "app"
         ],
         "tags": [
           "ai",
@@ -12184,7 +12155,7 @@
           "automation"
         ],
         "summary": "🧠 Leon is your open-source personal assistant.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -12197,6 +12168,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：skills/agent/coding/SKILL.md、skills/agent/document-authoring/SKILL.md、skills/agent/live-tutorial/SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "622b6737c5c4228aee1f52a93102001d290a25e85610c35b964e1a6aa546b1d0",
@@ -12782,9 +12757,9 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "knowledge",
+          "video",
           "image",
-          "agents"
+          "content"
         ],
         "forms": [
           "skill"
@@ -12798,7 +12773,7 @@
           "web-design"
         ],
         "summary": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -12811,6 +12786,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：skills/beautiful-article/SKILL.md、skills/gpt-image-2/SKILL.md、skills/kb-retriever/SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "06d4629411d6e1aed32ba58a5d85097bd1800aeeeb409a2bc360d51c0c9510f5",
@@ -12820,89 +12799,6 @@
         {
           "at": "2026-10-23T16:07:36.633Z",
           "stars": 13206
-        }
-      ]
-    },
-    {
-      "id": 1305663861,
-      "fullName": "Vincentwei1021/video-shotcraft",
-      "slug": "vincentwei1021-video-shotcraft-1305663861",
-      "url": "https://github.com/Vincentwei1021/video-shotcraft",
-      "description": "AI video skill for Claude Code & Codex — cinematic product videos with Remotion: 152 shot recipe cards, 209 motion previews, a production-ready template",
-      "homepage": "https://vincentwei1021.github.io/video-shotcraft/",
-      "stars": 13184,
-      "forks": 1192,
-      "language": "TypeScript",
-      "topics": [
-        "agent-skills",
-        "ai-agents",
-        "ai-video",
-        "claude-code",
-        "claude-code-skills",
-        "claude-skills",
-        "codex",
-        "motion-design",
-        "motion-graphics",
-        "product-video",
-        "promo-video",
-        "remotion",
-        "video-generation",
-        "video-production"
-      ],
-      "license": "Apache-2.0",
-      "archived": false,
-      "unavailable": false,
-      "pushedAt": "2026-10-17T17:50:53Z",
-      "createdAt": "2026-07-19T11:44:41Z",
-      "firstSeenAt": "2026-10-23T15:50:02.429Z",
-      "fetchedAt": "2026-10-23T16:07:36.633Z",
-      "defaultBranch": "main",
-      "readmeCheckedAt": "2026-10-23T15:50:02.429Z",
-      "sources": [
-        "search:video"
-      ],
-      "skillEvidence": true,
-      "classification": {
-        "aiRelated": true,
-        "categories": [
-          "video",
-          "coding",
-          "image"
-        ],
-        "forms": [
-          "skill"
-        ],
-        "tags": [
-          "agent-skills",
-          "ai-agents",
-          "ai-video",
-          "claude-code",
-          "claude-code-skills",
-          "claude-skills"
-        ],
-        "summary": "AI video skill for Claude Code & Codex — cinematic product videos with Remotion: 152 shot recipe cards, 209 motion previews, a production-ready template",
-        "status": "rules",
-        "evidence": [
-          {
-            "source": "description",
-            "text": "AI video skill for Claude Code & Codex — cinematic product videos with Remotion: 152 shot recipe cards, 209 motion previews, a production-ready template"
-          },
-          {
-            "source": "topics",
-            "text": "agent-skills, ai-agents, ai-video, claude-code, claude-code-skills, claude-skills, codex, motion-design, motion-graphics, product-video, promo-video, remotion"
-          },
-          {
-            "source": "readme",
-            "text": "已核实实际技能文件：SKILL.md"
-          }
-        ],
-        "readmeHash": "fa2bdc818346354b617fd3749d89e1ec36da8c9c8e807c94167b4b70b93d5c31",
-        "processedAt": "2026-10-23T15:50:02.429Z"
-      },
-      "snapshots": [
-        {
-          "at": "2026-10-23T16:07:36.633Z",
-          "stars": 13184
         }
       ]
     },
@@ -12942,12 +12838,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "models",
-          "knowledge",
-          "data"
+          "models"
         ],
         "forms": [
-          "app"
+          "model"
         ],
         "tags": [
           "api",
@@ -12958,7 +12852,7 @@
           "llm"
         ],
         "summary": "Gorilla: Training and Evaluating LLMs for Function Calls (Tool Calls)",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -12967,6 +12861,10 @@
           {
             "source": "topics",
             "text": "api, api-documentation, chatgpt, claude-api, gpt-4-api, llm, openai-api, openai-functions"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "cadf1e55ff5a9f1371812f292d0e97bd40c6b94f2c226b17ef82feeb742dbb64",
@@ -13006,16 +12904,14 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "coding",
-          "audio",
-          "office"
+          "content"
         ],
         "forms": [
           "skill"
         ],
         "tags": [],
         "summary": "Removes 20+ patterns of AI slop from any piece of writing.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -13024,6 +12920,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：skills/no-ai-slop/SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "a2e24837d6531c2e827876123d05ea482a21bcfc25358dbdacbf581fb1e51d81",
@@ -13138,12 +13038,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "audio",
-          "agents",
-          "models"
+          "audio"
         ],
         "forms": [
-          "skill"
+          "model"
         ],
         "tags": [
           "ai",
@@ -13154,7 +13052,7 @@
           "huggingface"
         ],
         "summary": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -13167,6 +13065,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：skills/yue2-music/SKILL.md、skills/yue2-music/instrumental/SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "ca41207b5edc1bbd9902ae21ade99986d7a81deff706a47bff252f7c3f987810",
@@ -13289,20 +13191,23 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "agents",
           "models",
-          "image"
+          "video"
         ],
         "forms": [
-          "app"
+          "model"
         ],
         "tags": [],
         "summary": "NVIDIA Cosmos is an open platform of world models, datasets, and tools that enables developers to build Physical AI for robots, autonomous vehicles, smart infrastructure, and more.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
             "text": "NVIDIA Cosmos is an open platform of world models, datasets, and tools that enables developers to build Physical AI for robots, autonomous vehicles, smart infrastructure, and more."
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "e5ffcdf6458890e036e0dc4147d7336bfe8ca08e9476b73d9a9ce2b2932a28cd",
@@ -14300,8 +14205,7 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "content",
-          "image"
+          "content"
         ],
         "forms": [
           "skill"
@@ -14331,7 +14235,7 @@
           },
           {
             "source": "manual",
-            "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "d1d4411106fe9f66f114e7feb28af142e735d109b489b64ade05578bad4d43b9",
@@ -15107,13 +15011,10 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "coding",
-          "models",
-          "agents"
+          "content"
         ],
         "forms": [
-          "skill",
-          "mcp"
+          "skill"
         ],
         "tags": [
           "ai-writing",
@@ -15124,7 +15025,7 @@
           "skill"
         ],
         "summary": "Skill that audits and rewrites content to remove AI writing patterns. Use it with your favorite agents including Claude Code, OpenClaw, Codex, and Hermes.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -15137,6 +15038,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：SKILL.md、plugins/avoid-ai-writing/skills/avoid-ai-writing/SKILL.md、skills/ai-writing-detector/SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "225a3dad131c13d83592f6263b98dcb17fedb651f0b50e04b092b18dd8525be2",
@@ -15739,12 +15644,10 @@
         "aiRelated": true,
         "categories": [
           "video",
-          "image",
           "content"
         ],
         "forms": [
-          "skill",
-          "resource"
+          "skill"
         ],
         "tags": [
           "agent-skills",
@@ -15771,7 +15674,7 @@
           },
           {
             "source": "manual",
-            "text": "首批人工核验：依据 GitHub 简介、Topics 和已采集的 README 证据校订；未采用仓库自称的性能或用户数量。"
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "d4f7e63539c03b934701337e4517f61f8b15cb6b4fc3a694e4d166247010e074",
@@ -16430,9 +16333,9 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "audio",
           "video",
-          "coding"
+          "audio",
+          "image"
         ],
         "forms": [
           "skill"
@@ -16441,7 +16344,7 @@
           "ai"
         ],
         "summary": "Generate text, images, video, speech, and music by MiniMax.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -16454,6 +16357,10 @@
           {
             "source": "readme",
             "text": "已核实实际技能文件：skill/SKILL.md、skill/h3-video/SKILL.md"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "4ae47731223d65481685c00f79d811f4a9d4e519c05bc81c6481956b762900b8",
@@ -16587,12 +16494,11 @@
       "classification": {
         "aiRelated": true,
         "categories": [
-          "knowledge",
           "agents",
-          "audio"
+          "office"
         ],
         "forms": [
-          "mcp"
+          "app"
         ],
         "tags": [
           "agents",
@@ -16603,7 +16509,7 @@
           "chatbot"
         ],
         "summary": "Desktop AI Assistant powered by GPT, Gemini, Claude, Grok, Ollama, DeepSeek, Perplexity, and more - chat, agents, tools, MCP, plugins, RAG, vision, voice, image and video generation, speech synthesis and speech recognition, web search, memory, presets, canvas, assistants, themes, computer use. Windows, Linux, and Mac.",
-        "status": "rules",
+        "status": "manual",
         "evidence": [
           {
             "source": "description",
@@ -16612,6 +16518,10 @@
           {
             "source": "topics",
             "text": "agents, ai, ai-assistant, artificial-intelligence, autonomous-agent, chatbot, claude, deepseek, desktop-app, gemini, gpt-5, gpt-6-astra"
+          },
+          {
+            "source": "manual",
+            "text": "按仓库主要交付物校订目录：可用应用、实际技能、模型与库分开；附带技能或提及 MCP 不改变主用途。"
           }
         ],
         "readmeHash": "0b96ed088bad036930e71b58c1ae8a1c40c9bffd6fee36cfdd8b786887e7014d",
@@ -16994,6 +16904,233 @@
         {
           "at": "2026-10-23T16:07:36.633Z",
           "stars": 962
+        }
+      ]
+    },
+    {
+      "id": 1137388347,
+      "fullName": "remotion-dev/skills",
+      "slug": "remotion-dev-skills-1137388347",
+      "url": "https://github.com/remotion-dev/skills",
+      "description": "Agent Skills",
+      "homepage": null,
+      "stars": 5572,
+      "forks": 617,
+      "language": "TypeScript",
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "unavailable": false,
+      "pushedAt": "2026-10-22T15:31:18Z",
+      "createdAt": "2026-01-19T09:58:43Z",
+      "firstSeenAt": "2026-10-23T16:26:09.123Z",
+      "fetchedAt": "2026-10-23T16:26:09.123Z",
+      "defaultBranch": "main",
+      "sources": [
+        "editorial"
+      ],
+      "skillEvidence": true,
+      "classification": {
+        "aiRelated": true,
+        "categories": [
+          "video"
+        ],
+        "forms": [
+          "skill"
+        ],
+        "tags": [
+          "视频 Skill",
+          "Remotion",
+          "React"
+        ],
+        "summary": "Remotion 官方视频创作 Skills，让 AI 编程助手按最佳实践制作 React 动画、字幕与程序化视频。",
+        "status": "manual",
+        "evidence": [
+          {
+            "source": "description",
+            "text": "Agent Skills"
+          },
+          {
+            "source": "readme",
+            "text": "已核实仓库中的 SKILL.md 文件或明确的技能安装命令"
+          },
+          {
+            "source": "manual",
+            "text": "核对仓库 README、技能目录及实际 SKILL.md；作为视频 Skill 推荐入口，推荐不等于热榜排名。"
+          }
+        ],
+        "readmeHash": "6e0e9a0bf53e2c7f14b3f35a5ad6195cc07ac20c5a0bb1fd8ffe3198408cf50d",
+        "processedAt": "2026-10-23T16:26:09.123Z"
+      },
+      "snapshots": [
+        {
+          "at": "2026-10-23T16:26:09.123Z",
+          "stars": 5572
+        }
+      ]
+    },
+    {
+      "id": 1305663861,
+      "fullName": "Vincentwei1021/video-shotcraft",
+      "slug": "vincentwei1021-video-shotcraft-1305663861",
+      "url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "description": "AI video skill for Claude Code & Codex — cinematic product videos with Remotion: 152 shot recipe cards, 209 motion previews, a production-ready template",
+      "homepage": "https://vincentwei1021.github.io/video-shotcraft/",
+      "stars": 13189,
+      "forks": 1193,
+      "language": "TypeScript",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "ai-video",
+        "claude-code",
+        "claude-code-skills",
+        "claude-skills",
+        "codex",
+        "motion-design",
+        "motion-graphics",
+        "product-video",
+        "promo-video",
+        "remotion",
+        "video-generation",
+        "video-production"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "unavailable": false,
+      "pushedAt": "2026-10-17T17:50:53Z",
+      "createdAt": "2026-07-19T11:44:41Z",
+      "firstSeenAt": "2026-10-23T15:50:02.429Z",
+      "fetchedAt": "2026-10-23T16:26:09.123Z",
+      "defaultBranch": "main",
+      "sources": [
+        "search:video",
+        "editorial"
+      ],
+      "skillEvidence": true,
+      "classification": {
+        "aiRelated": true,
+        "categories": [
+          "video"
+        ],
+        "forms": [
+          "skill"
+        ],
+        "tags": [
+          "视频 Skill",
+          "产品演示",
+          "镜头编排"
+        ],
+        "summary": "给 AI 助手的视频制作 Skill：把网页、截图和素材编排成带镜头运动、配音与音效的产品演示片。",
+        "status": "manual",
+        "evidence": [
+          {
+            "source": "description",
+            "text": "AI video skill for Claude Code & Codex — cinematic product videos with Remotion: 152 shot recipe cards, 209 motion previews, a production-ready template"
+          },
+          {
+            "source": "topics",
+            "text": "agent-skills, ai-agents, ai-video, claude-code, claude-code-skills, claude-skills, codex, motion-design, motion-graphics, product-video, promo-video, remotion"
+          },
+          {
+            "source": "readme",
+            "text": "已核实仓库中的 SKILL.md 文件或明确的技能安装命令"
+          },
+          {
+            "source": "manual",
+            "text": "核对仓库 README、技能目录及实际 SKILL.md；作为视频 Skill 推荐入口，推荐不等于热榜排名。"
+          }
+        ],
+        "readmeHash": "fa2bdc818346354b617fd3749d89e1ec36da8c9c8e807c94167b4b70b93d5c31",
+        "processedAt": "2026-10-23T16:26:09.123Z"
+      },
+      "snapshots": [
+        {
+          "at": "2026-10-23T16:26:09.123Z",
+          "stars": 13189
+        }
+      ]
+    },
+    {
+      "id": 1177402105,
+      "fullName": "heygen-com/hyperframes",
+      "slug": "heygen-com-hyperframes-1177402105",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "homepage": "https://hyperframes.dev",
+      "stars": 70554,
+      "forks": 6388,
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "animation",
+        "claude-code",
+        "ffmpeg",
+        "framework",
+        "gsap",
+        "html",
+        "html-to-video",
+        "mcp",
+        "motion-graphics",
+        "puppeteer",
+        "rendering",
+        "typescript",
+        "video-editor"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "unavailable": false,
+      "pushedAt": "2026-10-23T16:23:19Z",
+      "createdAt": "2026-03-10T01:51:06Z",
+      "firstSeenAt": "2026-10-23T15:42:26.459Z",
+      "fetchedAt": "2026-10-23T16:26:09.123Z",
+      "defaultBranch": "main",
+      "sources": [
+        "trending",
+        "editorial"
+      ],
+      "skillEvidence": true,
+      "classification": {
+        "aiRelated": true,
+        "categories": [
+          "video"
+        ],
+        "forms": [
+          "skill"
+        ],
+        "tags": [
+          "视频 Skill",
+          "HTML 视频",
+          "Agent"
+        ],
+        "summary": "用 HTML、CSS 和 JavaScript 创建视频的开源工具，提供 Agent Skills，支持预览、时间线和视频渲染。",
+        "status": "manual",
+        "evidence": [
+          {
+            "source": "description",
+            "text": "Write HTML. Render video. Built for agents."
+          },
+          {
+            "source": "topics",
+            "text": "ai, ai-agents, animation, claude-code, ffmpeg, framework, gsap, html, html-to-video, mcp, motion-graphics, puppeteer"
+          },
+          {
+            "source": "readme",
+            "text": "已核实仓库中的 SKILL.md 文件或明确的技能安装命令"
+          },
+          {
+            "source": "manual",
+            "text": "核对仓库 README、技能目录及实际 SKILL.md；作为视频 Skill 推荐入口，推荐不等于热榜排名。"
+          }
+        ],
+        "readmeHash": "f90b77b82976fe69d697c12f32b1a31ca6651d0342708248f933bf4280034b89",
+        "processedAt": "2026-10-23T16:26:09.123Z"
+      },
+      "snapshots": [
+        {
+          "at": "2026-10-23T16:26:09.123Z",
+          "stars": 70554
         }
       ]
     }
