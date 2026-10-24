@@ -1,0 +1,21 @@
+{
+  "repository": "dexhunter/seedance2-skill",
+  "branch": "main",
+  "checkedAt": "2026-10-24T04:50:44.284Z",
+  "files": [
+    {
+      "language": "en",
+      "path": "README.md",
+      "markdown": "![Seedance 2.0 Prompt Writing Skills](assets/seedance2-thumbnail.png)\n\n# Seedance 2.0 Prompt Writing Skills\n\n[中文](README-zh.md)\n\n[Agent skills](https://agentskills.io) for writing effective video generation prompts for [Jimeng Seedance 2.0](https://jimeng.jianying.com/), ByteDance's multimodal AI video generation model. Works with Claude Code, Cursor, Cline, and other compatible agents.\n\nCovers input constraints, @ reference syntax, camera language, prompt structure patterns, and ready-to-use templates for ads, dramas, MVs, educational content, and more.\n\n## Install\n\n### Option A: Manual copy (recommended)\n\nClone or download this repository, then copy the skill file(s) to your Claude skills directory:\n\n```bash\nmkdir -p ~/.claude/skills\n\n# English\ncp SKILL.md ~/.claude/skills/seedance-prompt-en.md\n\n# Chinese\ncp zh/SKILL.md ~/.claude/skills/seedance-prompt-zh.md\n```\n\n### Option B: Via skills CLI\n\n```bash\nnpx skills add dexhunter/seedance2-skill\n```\n\nThen ask your AI agent to help you write a Seedance 2.0 video prompt.\n\n## Skills\n\n| File | Language | Description |\n|---|---|---|\n| [SKILL.md](SKILL.md) | English | Prompt writing guide for Seedance 2.0 |\n| [zh/SKILL.md](zh/SKILL.md) | 中文 | Seedance 2.0 提示词撰写指南 |\n\n## Sources\n\nBased on official ByteDance documentation:\n\n- [Seedance 2.0 User Manual](https://bytedance.larkoffice.com/wiki/A5RHwWhoBiOnjukIIw6cu5ybnXQ) — Parameters, interaction methods, multimodal capabilities, and example prompts\n- [Seedance 2.0 Real-world Cases](https://bytedance.larkoffice.com/wiki/LJXzwehluiFdzKkb1recZdfonZg) — Drama production, e-commerce ads, dance imitation, science education, AI MVs, and more\n\n## License\n\n[MIT](LICENSE)\n",
+      "sha": "6064aa4e8dd0f5377ad864982f9d8b4b5d738817",
+      "fetchedAt": "2026-10-24T04:50:44.284Z"
+    },
+    {
+      "language": "zh",
+      "path": "README-zh.md",
+      "markdown": "![Seedance 2.0 视频提示词撰写技能](assets/seedance2-thumbnail.png)\n\n# Seedance 2.0 视频提示词撰写技能\n\n[English](README.md)\n\n为[即梦 Seedance 2.0](https://jimeng.jianying.com/) 多模态 AI 视频生成模型打造的 [Agent Skills](https://agentskills.io) 提示词撰写技能。支持 Claude Code、Cursor、Cline 等兼容的 AI 代理。\n\n涵盖输入约束、@ 引用语法、运镜语言、提示词结构模式，以及广告、短剧、MV、科普教育等场景的现成模版。\n\n## 安装\n\n### 方式 A：手动复制（推荐）\n\n克隆或下载本仓库，然后将技能文件复制到 Claude skills 目录：\n\n```bash\nmkdir -p ~/.claude/skills\n\n# 中文版\ncp zh/SKILL.md ~/.claude/skills/seedance-prompt-zh.md\n\n# 英文版\ncp SKILL.md ~/.claude/skills/seedance-prompt-en.md\n```\n\n### 方式 B：通过 skills CLI\n\n```bash\nnpx skills add dexhunter/seedance2-skill\n```\n\n然后让你的 AI 代理帮你撰写 Seedance 2.0 视频提示词即可。\n\n## 技能文件\n\n| 文件 | 语言 | 说明 |\n|---|---|---|\n| [SKILL.md](SKILL.md) | English | Prompt writing guide for Seedance 2.0 |\n| [zh/SKILL.md](zh/SKILL.md) | 中文 | Seedance 2.0 提示词撰写指南 |\n\n## 资料来源\n\n基于字节跳动官方文档整理：\n\n- [即梦 Seedance 2.0 使用手册](https://bytedance.larkoffice.com/wiki/A5RHwWhoBiOnjukIIw6cu5ybnXQ) — 参数说明、交互方式、多模态能力与示例提示词\n- [小云雀 Seedance 2.0 实测案例](https://bytedance.larkoffice.com/wiki/LJXzwehluiFdzKkb1recZdfonZg) — 剧情制作、电商广告、舞蹈模仿、科普教学、AI MV 等场景\n\n## 许可证\n\n[MIT](LICENSE)\n",
+      "sha": "10f794540e217e3982fe2a5b78c79a9857a67e6c",
+      "fetchedAt": "2026-10-24T04:50:44.284Z"
+    }
+  ]
+}
